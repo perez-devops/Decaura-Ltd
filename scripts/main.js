@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
         videos[0].play().catch(() => {});
         indicators[0].classList.add('active');
         cycleTimer = setTimeout(() => setVideo(1), 7000);
-
         indicators.forEach((ind, i) => ind.addEventListener('click', () => setVideo(i)));
     }
 
@@ -57,12 +56,17 @@ document.addEventListener('DOMContentLoaded', () => {
            Each character of the blockquote starts at near-invisible
            and colours in as the user scrolls, from right to left.
     ──────────────────────────────────────────────────────── */
-    const quoteSection = document.querySelector('.quote-section');
-    const blockquote   = quoteSection && quoteSection.querySelector('blockquote');
+    const revealQuotes = document.querySelectorAll('blockquote');
 
-    if (blockquote) {
-        // Wrap every character in a <span class="char"> using TreeWalker
-        // so HTML entities and <br> tags are preserved perfectly.
+    revealQuotes.forEach(blockquote => {
+        const section = blockquote.closest('section');
+        if (!section) return;
+
+        // Ensure we only wrap once
+        if (blockquote.dataset.wrapped) return;
+        blockquote.dataset.wrapped = "true";
+
+        // Wrap characters
         (function wrapChars(el) {
             const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
             const textNodes = [];
@@ -71,10 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             textNodes.forEach(textNode => {
                 const frag = document.createDocumentFragment();
-                for (const ch of textNode.textContent) {
+                const content = textNode.textContent;
+                for (let i = 0; i < content.length; i++) {
                     const span = document.createElement('span');
                     span.className = 'char';
-                    span.textContent = ch;
+                    span.textContent = content[i];
                     frag.appendChild(span);
                 }
                 textNode.parentNode.replaceChild(frag, textNode);
@@ -85,30 +90,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const total = chars.length;
 
         function updateQuote() {
-            if (!total) return;
-            const rect = quoteSection.getBoundingClientRect();
-            const vh   = window.innerHeight;
+            const rect = section.getBoundingClientRect();
+            const vh = window.innerHeight;
+            
+            // Section visibility progress
+            // Start revealing as section enters viewport, finish when centered
+            const start = vh;
+            const end = vh * 0.3;
+            const progress = (start - rect.top) / (start - end);
+            const p = Math.max(0, Math.min(1, progress));
 
-            // Progress 0 → section just entering from bottom
-            // Progress 1 → section is centred in the viewport
-            const p = Math.max(0, Math.min(1,
-                (vh - rect.top) / (vh + rect.height * 0.4)
-            ));
+            const toReveal = Math.floor(p * total);
 
-            const toReveal = Math.round(p * total);
-
-            // Left to right, top to bottom — characters colour in reading order
-            chars.forEach((ch, i) => {
-                ch.style.color = i < toReveal
-                    ? '#1F1F1F'
-                    : 'rgba(31,31,31,0.1)';
+            chars.forEach((char, i) => {
+                if (i < toReveal) {
+                    char.style.color = 'var(--ink-black)';
+                    char.style.opacity = '1';
+                } else {
+                    char.style.color = 'rgba(31, 31, 31, 0.1)';
+                }
             });
         }
 
-        // Run once on load (in case section is already in view)
-        updateQuote();
         window.addEventListener('scroll', updateQuote, { passive: true });
-    }
+        updateQuote(); // Initial check
+    });
 
 
     /* ──────────────────────────────────────────────────────
@@ -175,35 +181,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /* ──────────────────────────────────────────────────────
-       4.  SERVICES TAB SWITCHER
+       4.  SERVICES TAB SWITCHER & AUTO-CYCLE
+           Services rotate every 7 seconds. Clicking a tab
+           switches immediately and resets the cycle.
     ──────────────────────────────────────────────────────── */
-    const serviceTabs    = document.querySelectorAll('.service-tab');
+    const serviceTabs    = Array.from(document.querySelectorAll('.service-tab'));
     const serviceImg     = document.getElementById('service-img');
     const serviceDesc    = document.getElementById('service-desc');
     const serviceHeading = document.getElementById('service-heading');
+    let   currentService = 0;
+    let   serviceTimer   = null;
 
     function fadeSwap(el, value, type) {
+        if (!el) return;
         el.style.opacity = '0';
         setTimeout(() => {
             if (type === 'src')  el.src       = value;
             else                 el.innerHTML  = value;
             el.style.opacity = '1';
-        }, 250);
+        }, 300);
     }
 
-    if (serviceImg)     serviceImg.style.transition     = 'opacity 0.25s ease';
-    if (serviceDesc)    serviceDesc.style.transition    = 'opacity 0.25s ease';
-    if (serviceHeading) serviceHeading.style.transition = 'opacity 0.25s ease';
+    function setService(index) {
+        if (!serviceTabs.length) return;
+        
+        serviceTabs.forEach(t => t.classList.remove('active'));
+        currentService = index;
+        const activeTab = serviceTabs[currentService];
+        activeTab.classList.add('active');
 
-    serviceTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            serviceTabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            if (serviceImg)     fadeSwap(serviceImg,     tab.dataset.img,     'src');
-            if (serviceDesc)    fadeSwap(serviceDesc,    tab.dataset.desc,    'html');
-            if (serviceHeading) fadeSwap(serviceHeading, tab.dataset.heading, 'html');
+        // Extract data
+        const h = activeTab.dataset.heading;
+        const i = activeTab.dataset.img;
+        const d = activeTab.dataset.desc;
+
+        // Swap content
+        fadeSwap(serviceHeading, h, 'html');
+        fadeSwap(serviceImg, i, 'src');
+        fadeSwap(serviceDesc, d, 'html');
+
+        // Restart timer
+        clearTimeout(serviceTimer);
+        serviceTimer = setTimeout(() => setService((currentService + 1) % serviceTabs.length), 5000);
+    }
+
+    if (serviceImg)     serviceImg.style.transition     = 'opacity 0.3s ease';
+    if (serviceDesc)    serviceDesc.style.transition    = 'opacity 0.3s ease';
+    if (serviceHeading) serviceHeading.style.transition = 'opacity 0.3s ease';
+
+    if (serviceTabs.length) {
+        // Start the cycle
+        serviceTimer = setTimeout(() => setService(1), 7000);
+
+        serviceTabs.forEach((tab, i) => {
+            tab.addEventListener('click', () => setService(i));
         });
-    });
+    }
 
 
     /* ──────────────────────────────────────────────────────
@@ -227,16 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     document.head.appendChild(revealStyle);
 
-    const revealEls = document.querySelectorAll([
-        '.quote-section',
-        '.featured-work',
-        '.stats-section',
-        '.featured-in',
-        '.services-section',
-        '.why-section',
-        '.cta-section',
-        '.footer',
-    ].join(', '));
+    const revealEls = document.querySelectorAll('.reveal');
 
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -251,5 +275,66 @@ document.addEventListener('DOMContentLoaded', () => {
         el.classList.add('reveal');
         revealObserver.observe(el);
     });
+
+    /* ──────────────────────────────────────────────────────
+       7.  TESTIMONIAL SLIDER
+    ──────────────────────────────────────────────────────── */
+    const tDataEl = document.getElementById('testimonial-data');
+    const testimonials = tDataEl ? JSON.parse(tDataEl.textContent) : [];
+    
+    const tQuote   = document.getElementById('t-quote');
+    const tName    = document.getElementById('t-name');
+    const tTitle   = document.getElementById('t-title');
+    const tAvatar  = document.getElementById('t-avatar');
+    const tDisplay = document.getElementById('testimonial-display');
+    const tDots    = document.getElementById('t-dots');
+    const btnPrev  = document.getElementById('t-prev');
+    const btnNext  = document.getElementById('t-next');
+
+    let currentT = 0;
+
+    function initTestimonials() {
+        if (!testimonials.length || !tDots) return;
+        
+        // Create dots
+        testimonials.forEach((_, i) => {
+            const dot = document.createElement('span');
+            dot.className = `t-dot ${i === 0 ? 'active' : ''}`;
+            dot.addEventListener('click', () => setTestimonial(i));
+            tDots.appendChild(dot);
+        });
+
+        if (btnPrev) btnPrev.addEventListener('click', () => setTestimonial((currentT - 1 + testimonials.length) % testimonials.length));
+        if (btnNext) btnNext.addEventListener('click', () => setTestimonial((currentT + 1) % testimonials.length));
+    }
+
+    function setTestimonial(index) {
+        if (index === currentT) return;
+        
+        // Fade out
+        tDisplay.style.opacity = '0';
+        tDisplay.style.transform = 'translateY(10px)';
+
+        setTimeout(() => {
+            currentT = index;
+            const data = testimonials[currentT];
+
+            // Update content
+            if (tQuote)  tQuote.textContent  = data.quote;
+            if (tName)   tName.textContent   = data.name;
+            if (tTitle)  tTitle.textContent  = data.title;
+            if (tAvatar) tAvatar.src        = data.avatar;
+
+            // Update dots
+            const dots = tDots.querySelectorAll('.t-dot');
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === currentT));
+
+            // Fade in
+            tDisplay.style.opacity = '1';
+            tDisplay.style.transform = 'translateY(0)';
+        }, 400);
+    }
+
+    initTestimonials();
 
 });
