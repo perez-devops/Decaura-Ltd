@@ -11,17 +11,34 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="./images/company-logos/decaura-favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body>
     <nav class="navbar">
       <div class="nav-logo">
-        <img src="./images/company-logos/Decaura logo A.png" alt="Decaura" />
+        <img
+          src="./images/company-logos/Decaura logo A.png"
+          alt="Decaura"
+          decoding="async"
+        />
       </div>
       <div class="nav-links">
         <ul>
           <li><a href="#" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="./services.html">Approach</a></li>
+          <li><a href="./approach.html">Approach</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
         </ul>
       </div>
@@ -48,6 +65,7 @@
             muted
             playsinline
             preload="auto"
+            fetchpriority="high"
           ></video>
           <video
             class="hero-video"
@@ -76,7 +94,7 @@
 
         <div class="hero-content">
           <h1 class="hero-heading">
-            Refined Interiors.<br />Seamlessly Delivered
+            Refined Interiors.<br />Seamlessly Delivered.
           </h1>
           <p class="hero-sub">
             A considered approach to interior design and project
@@ -140,6 +158,8 @@
               <img
                 src="./images/featured works/Featured Image 1.webp"
                 alt="Featured project"
+                loading="lazy"
+                decoding="async"
               />
               <span class="slide-label">Residential Villa</span>
             </div>
@@ -147,6 +167,8 @@
               <img
                 src="./images/featured works/Featured Image 2.webp"
                 alt="Featured project"
+                loading="lazy"
+                decoding="async"
               />
               <span class="slide-label">Private Penthouse</span>
             </div>
@@ -154,6 +176,8 @@
               <img
                 src="./images/featured works/Featured Image 3.webp"
                 alt="Featured project"
+                loading="lazy"
+                decoding="async"
               />
               <span class="slide-label">Boutique Hotel</span>
             </div>
@@ -161,6 +185,8 @@
               <img
                 src="./images/featured works/Featured Image 4.webp"
                 alt="Featured project"
+                loading="lazy"
+                decoding="async"
               />
               <span class="slide-label">Executive Office</span>
             </div>
@@ -168,6 +194,8 @@
               <img
                 src="./images/featured works/Featured Image 5.webp"
                 alt="Featured project"
+                loading="lazy"
+                decoding="async"
               />
               <span class="slide-label">Luxury Apartment</span>
             </div>
@@ -344,6 +372,8 @@
                   <img
                     src="./images/icons/badge (1).png"
                     alt="Years of experience icon"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -356,7 +386,12 @@
                 </div>
                 <span>+</span>
                 <div class="stat-icon">
-                  <img src="./images/icons/global.png" alt="Continents icon" />
+                  <img
+                    src="./images/icons/global.png"
+                    alt="Continents icon"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
               </div>
               <div class="stat-label">Continents</div>
@@ -374,12 +409,16 @@
               <img
                 src="./images/Featured Company Logos/69958993b0bdf77a853ded4a_hmb-properties.png"
                 alt="HMB Properties"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="logo-item">
               <img
                 src="./images/Featured Company Logos/6996b4060dfd735aa05846f9_Jumeirah.png"
                 alt="Jumeirah"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="logo-item">
@@ -405,6 +444,8 @@
               <img
                 src="./images/Featured Company Logos/69958993b0bdf77a853ded4a_hmb-properties.png"
                 alt="HMB Properties"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="logo-item">
@@ -452,6 +493,8 @@
                   id="service-img"
                   src="./images/Service Images/Featured Image 3.webp"
                   alt="Service"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <p class="service-description" id="service-desc">
@@ -460,7 +503,9 @@
                 to site supervision, we manage every detail to deliver a
                 seamless journey from the initial vision to final completion.
               </p>
-              <a href="#" class="btn btn-ghost">DISCOVER MORE &rarr;</a>
+              <a href="#" class="btn btn-ghost"
+                >DISCOVER MORE <i class="fas fa-arrow-right"></i
+              ></a>
             </div>
 
             <!-- RIGHT: tab navigation -->
@@ -473,7 +518,9 @@
                   data-img="./images/Service Images/Featured Image 1.webp"
                   data-desc="We craft interiors that balance aesthetics and function—creating spaces that are both beautiful and deeply liveable. Every detail is considered, every material intentional."
                 >
-                  <span class="tab-arrow">&rsaquo;</span>Interior Design
+                  <span class="tab-arrow"
+                    ><i class="fas fa-angle-right"></i></span
+                  >Interior Design
                 </li>
                 <li
                   class="service-tab"
@@ -482,7 +529,9 @@
                   data-img="./images/Service Images/Featured Image 2.webp"
                   data-desc="Our project management expertise ensures timelines are met, budgets are controlled, and quality is never compromised. We coordinate all stakeholders with precision and clarity."
                 >
-                  <span class="tab-arrow">&rsaquo;</span>Project Management
+                  <span class="tab-arrow"
+                    ><i class="fas fa-angle-right"></i></span
+                  >Project Management
                 </li>
                 <li
                   class="service-tab active"
@@ -491,8 +540,9 @@
                   data-img="./images/Service Images/Featured Image 3.webp"
                   data-desc="We provide end-to-end oversight to ensure every design concept is executed with absolute precision. From technical coordination to site supervision, we manage every detail to deliver a seamless journey from the initial vision to final completion."
                 >
-                  <span class="tab-arrow">&rsaquo;</span>Fully Managed Design
-                  &amp; Delivery
+                  <span class="tab-arrow"
+                    ><i class="fas fa-angle-right"></i></span
+                  >Fully Managed Design &amp; Delivery
                 </li>
                 <li
                   class="service-tab"
@@ -501,7 +551,9 @@
                   data-img="./images/Service Images/Featured Image 4.webp"
                   data-desc="Our consultation service offers expert guidance on space planning, material selection, and design direction—giving you a clear vision and actionable path forward from the very start."
                 >
-                  <span class="tab-arrow">&rsaquo;</span>Design Consultation
+                  <span class="tab-arrow"
+                    ><i class="fas fa-angle-right"></i></span
+                  >Design Consultation
                 </li>
               </ul>
             </div>
@@ -524,10 +576,17 @@
                 We combine refined design with structured execution; ensuring
                 every project is delivered with control and attention to detail.
               </p>
-              <a href="#" class="btn btn-ghost">DISCOVER MORE &rarr;</a>
+              <a href="#" class="btn btn-ghost"
+                >DISCOVER MORE <i class="fas fa-arrow-right"></i
+              ></a>
             </div>
             <div class="why-image">
-              <img src="./images/portfolio-4.png" alt="Decaura studio" />
+              <img
+                src="./images/portfolio-4.png"
+                alt="Decaura studio"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </div>
         </div>
@@ -615,7 +674,9 @@
         <div class="container">
           <h2>Refinement Begins Here.</h2>
           <p>Where design is not only envisioned but precisely realised.</p>
-          <a href="#" class="btn btn-bronze">Begin Your Project</a>
+          <a href="#" class="btn btn-bronze"
+            >Begin Your Project <i class="fas fa-arrow-right"></i
+          ></a>
         </div>
       </section>
     </main>
@@ -632,6 +693,8 @@
               src="./images/company-logos/Decaura logo A.png"
               alt="Decaura"
               class="ff-logo"
+              loading="lazy"
+              decoding="async"
             />
             <p class="ff-tagline">
               Blending international design sensibility with local Nigerian
@@ -754,7 +817,9 @@
       <div class="footer-full-bottom">
         <div class="container">
           <p class="ff-copy">@DECAURA STUDIO</p>
-          <p class="ff-motto">Thoughtful by design. Delivered with precision.</p>
+          <p class="ff-motto">
+            Thoughtful by design. Delivered with precision.
+          </p>
           <div class="ff-bottom-links">
             <a href="#">PRIVACY POLICY</a>
             <a href="#">TERMS OF SERVICE</a>

@@ -239,6 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+
     /* ──────────────────────────────────────────────────────
        5.  NAVBAR  –  transparent → solid white on scroll
     ──────────────────────────────────────────────────────── */

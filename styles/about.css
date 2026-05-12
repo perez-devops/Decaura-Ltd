@@ -37,7 +37,7 @@
     min-height: 520px;
     overflow: hidden;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 .about-hero-bg {
     position: absolute;
@@ -54,6 +54,8 @@
         rgba(8, 6, 3, 0.45) 50%,
         rgba(8, 6, 3, 0.20) 100%
     );
+    display: flex;
+    align-items: center;
     width: 100%;
      /* Optional subtle texture overlay */
      background-image: url('../images/texture-overlay.png');
@@ -61,8 +63,7 @@
 .about-hero-content {
     position: relative;
     z-index: 2;
-    padding-bottom: clamp(48px, 7vh, 80px);
-    padding-top: 72px; /* navbar offset */
+    display: flex;
 }
 .about-hero-label {
     font-family: var(--sans);
@@ -180,7 +181,7 @@
    ════════════════════════════════════════════════════════════ */
 .philosophy-section {
     background: var(--porcelain-white);
-    padding: 120px 0;
+    padding: 120px 0px 0px 0px;
     text-align: center;
 }
 .philosophy-heading {
@@ -189,7 +190,7 @@
     font-weight: 400;
     line-height: 1.4;
     margin: 0 auto 56px;
-    padding: 0;
+    padding: 70px 0px 0px 0px;
     display: block;
     width: 100%;
     text-align: center;

@@ -143,22 +143,36 @@ h1, h2, h3, h4 {
     cursor: pointer;
 }
 .btn-bronze {
-    background: var(--brushed-bronze);
-    color: var(--pure-white);
-    border: 1px solid var(--brushed-bronze);
+    background: #CDB68D;
+    color: var(--ink-black);
+    border: 1px solid #CDB68D;
 }
 .btn-bronze:hover {
-    background: #a07a44;
-    border-color: #a07a44;
+    background: #ba9e6b;
+    border-color: #ba9e6b;
 }
 .btn-contact {
-    background: var(--brushed-bronze);
-    color: var(--pure-white);
-    border: 1px solid var(--brushed-bronze);
+    background: #CDB68D;
+    color: var(--ink-black);
+    border: 1px solid #CDB68D;
     padding: 10px 24px;
     font-size: 11px;
     letter-spacing: 0.14em;
     border-radius: 1px;
+}
+.btn-contact:hover {
+    background: #ba9e6b;
+    border-color: #ba9e6b;
+}
+.btn-ghost {
+    background: #CDB68D;
+    color: var(--ink-black);
+    border: 1px solid #CDB68D;
+    padding: 12px 28px;
+}
+.btn-ghost:hover {
+    background: #ba9e6b;
+    border-color: #ba9e6b;
 }
 
 .begin-project {
@@ -168,20 +182,6 @@ h1, h2, h3, h4 {
     align-items: center;
     font-size: 11px;
     letter-spacing: 0.16em;
-}
-.btn-contact:hover {
-    background: #a07a44;
-    border-color: #a07a44;
-}
-.btn-ghost {
-    background: transparent;
-    color: var(--ink-black);
-    border: 1px solid var(--arch-beige);
-    padding: 12px 28px;
-}
-.btn-ghost:hover {
-    border-color: var(--brushed-bronze);
-    color: var(--brushed-bronze);
 }
 
 
@@ -700,7 +700,52 @@ h1, h2, h3, h4 {
 
 
 /* ════════════════════════════════════════════════════════════
-   OUR SERVICES
+   APPROACH HERO (Banner before Services)
+   ════════════════════════════════════════════════════════════ */
+.approach-hero {
+    position: relative;
+    height: 80vh;
+    min-height: 600px;
+    background-image: url('../approach_hero_bg_1778448351513.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: var(--pure-white);
+    overflow: hidden;
+}
+.approach-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.2));
+}
+.approach-hero .container {
+    position: relative;
+    z-index: 2;
+}
+.approach-content {
+    max-width: 700px;
+}
+.approach-content h1 {
+    font-family: var(--serif);
+    font-size: clamp(40px, 6vw, 84px);
+    font-weight: 400;
+    line-height: 1.05;
+    margin-bottom: 32px;
+}
+.approach-content p {
+    font-family: var(--sans);
+    font-size: clamp(16px, 1.2vw, 20px);
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 48px;
+    opacity: 0.9;
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   OUR SERVICES (Tabbed Layout)
    ════════════════════════════════════════════════════════════ */
 .services-section {
     background: var(--porcelain-white);
@@ -777,30 +822,34 @@ h1, h2, h3, h4 {
     gap: 16px;
     padding: 20px 0;
     border-bottom: 1px solid var(--shadow-grey);
-    font-family: var(--serif);
-    font-size: 18px;
-    font-weight: 400;
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 300;
     color: var(--warm-graphite);
     cursor: pointer;
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: color 0.25s ease;
 }
 .service-tab:first-child { border-top: 1px solid var(--shadow-grey); }
 .service-tab:hover { color: var(--ink-black); }
 .service-tab.active {
     color: var(--brushed-bronze);
-    padding-left: 28px; /* Highlighted and shifted inside */
+    font-weight: 400;
 }
 .tab-arrow {
-    font-size: 24px;
+    font-size: 14px; /* Smaller, more minimalistic */
     line-height: 1;
     color: var(--arch-beige);
-    transition: all 0.4s ease;
-    opacity: 0.4;
+    transition: color 0.25s ease, transform 0.25s ease;
+    opacity: 0.8; /* Subtle opacity for luxury feel */
 }
-.service-tab.active .tab-arrow {
+.service-tab.active .tab-arrow,
+.service-tab:hover .tab-arrow {
     color: var(--brushed-bronze);
-    opacity: 1;
+    transform: translateX(3px);
 }
+
+
+
 
 
 /* ════════════════════════════════════════════════════════════
@@ -1157,7 +1206,7 @@ h1, h2, h3, h4 {
    RESPONSIVE
    ════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
-    .services-layout,
+    .services-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
     .why-layout {
         grid-template-columns: 1fr;
         gap: 48px;
@@ -1182,6 +1231,7 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
+    .services-grid { grid-template-columns: 1fr; }
     .navbar     { padding: 0 24px; }
     .nav-links  { display: none; }
 
