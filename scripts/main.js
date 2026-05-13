@@ -40,7 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Schedule next
         clearTimeout(cycleTimer);
-        cycleTimer = setTimeout(() => setVideo((currentVid + 1) % videos.length), 7000);
+        const nextIndex = (currentVid + 1) % videos.length;
+        
+        // Preload next video 3s before it switches
+        setTimeout(() => {
+            videos[nextIndex].preload = 'auto';
+        }, 4000);
+
+        cycleTimer = setTimeout(() => setVideo(nextIndex), 7000);
     }
 
     if (videos.length) {

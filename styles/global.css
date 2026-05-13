@@ -121,6 +121,18 @@ h1, h2, h3, h4 {
     background: var(--arch-beige);
     flex: 1;
 }
+
+/* ── PERFORMANCE OPTIMIZATIONS ──────────────────────────────── */
+.featured-work,
+.services-section,
+.why-section,
+.founder-section,
+.philosophy-section,
+.foundation-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 500px; /* Rough estimate of section height */
+}
+
 .section-header p {
     color: var(--warm-graphite);
     font-size: 15px;
@@ -293,6 +305,8 @@ h1, h2, h3, h4 {
     opacity: 0;
     transition: opacity 1.2s ease;
     pointer-events: none;
+    will-change: opacity;
+    transform: translateZ(0); /* Force GPU acceleration */
 }
 .hero-video.active {
     opacity: 1;
