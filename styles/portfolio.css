@@ -119,8 +119,8 @@
 }
 
 .filter-btn.active {
-    background: #D1B68D;
-    color: var(--pure-white);
+    background: #CDB68D;
+    color: var(--ink-black);
 }
 
 /* --- Grid --- */
@@ -212,8 +212,8 @@
     gap: 10px;
     font-size: 10px;
     font-weight: 500;
-    color: var(--pure-white);
-    background: #B8965A;
+    color: var(--ink-black);
+    background: #CDB68D;
     padding: 12px 20px;
     width: fit-content;
     letter-spacing: 0.1em;

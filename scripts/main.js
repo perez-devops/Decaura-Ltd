@@ -344,5 +344,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     initTestimonials();
+    
+    /* ──────────────────────────────────────────────────────
+       8.  MOBILE NAVIGATION TOGGLE
+    ──────────────────────────────────────────────────────── */
+    const navToggle  = document.querySelector('.nav-toggle');
+    const navLinks   = document.querySelector('.nav-links');
+    const navOverlay = document.querySelector('.nav-overlay');
+    
+    if (navToggle && navLinks && navOverlay) {
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking links or overlay
+        [navOverlay, ...navLinks.querySelectorAll('a')].forEach(el => {
+            el.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                navOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
 
 });

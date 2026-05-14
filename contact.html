@@ -26,6 +26,7 @@
     <!-- ══════════════════════════════
          NAVIGATION
     ══════════════════════════════ -->
+    <div class="nav-overlay"></div>
     <nav class="navbar">
       <div class="nav-logo">
         <img
@@ -37,12 +38,18 @@
           fetchpriority="high"
         />
       </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
       <div class="nav-links">
         <ul>
           <li><a href="./index.html">Home</a></li>
           <li><a href="./about.html">About</a></li>
           <li><a href="./approach.html">Approach</a></li>
           <li><a href="./portfolio.html">Portfolio</a></li>
+          <li class="mobile-only">
+            <a href="./contact.html" class="active">Contact</a>
+          </li>
         </ul>
       </div>
       <div class="nav-cta">
@@ -60,8 +67,9 @@
           <div class="contact-hero-content">
             <h1>Begin a private conversation.</h1>
             <p>
-              Every Decaura project begins with understanding – your vision, your lifestyle, 
-              your investment, and the way you want a space to feel.
+              Every Decaura project begins with understanding – your vision,
+              your lifestyle, your investment, and the way you want a space to
+              feel.
             </p>
             <a href="#contact-form" class="btn btn-bronze">
               SCHEDULE A CONSULTATION <i class="fas fa-arrow-right"></i>
@@ -76,19 +84,20 @@
       <section class="contact-main reveal" id="contact-form">
         <div class="container">
           <div class="contact-layout">
-            
             <!-- LEFT COLUMN: OFFICE INFO -->
             <div class="contact-info">
               <div class="info-block">
                 <span class="info-label">PRIVATE CLIENT OFFICE</span>
                 <div class="info-item">
-                  <div class="info-icon"><i class="fas fa-location-dot"></i></div>
+                  <div class="info-icon">
+                    <i class="fas fa-location-dot"></i>
+                  </div>
                   <div class="info-text">
                     <h3>LAGOS, NIGERIA</h3>
-                    <p>The Design House,<br>Lekki Phase 1</p>
+                    <p>The Design House,<br />Lekki Phase 1</p>
                   </div>
                 </div>
-                
+
                 <div class="info-item">
                   <div class="info-icon"><i class="far fa-calendar"></i></div>
                   <div class="info-text">
@@ -101,7 +110,7 @@
                   <div class="info-icon"><i class="fas fa-phone"></i></div>
                   <div class="info-text">
                     <h3>TELEPHONE</h3>
-                    <p>+234(0) 810 900 8366</p>
+                    <p>+234(0) 8109008366</p>
                   </div>
                 </div>
 
@@ -117,8 +126,13 @@
               <!-- DIRECT CALL BOX -->
               <div class="direct-call-card">
                 <h3>Prefer a Direct Call?</h3>
-                <p>Schedule a private discovery call at a time that suits your calendar perfectly.</p>
-                <a href="#" class="book-link">BOOK A CALL <i class="fas fa-arrow-right"></i></a>
+                <p>
+                  Schedule a private discovery call at a time that suits your
+                  calendar perfectly.
+                </p>
+                <a href="#" class="book-link"
+                  >BOOK A CALL <i class="fas fa-arrow-right"></i
+                ></a>
                 <div class="clock-icon-bg">
                   <i class="far fa-clock"></i>
                 </div>
@@ -131,19 +145,33 @@
               <form class="project-form">
                 <div class="form-row">
                   <div class="form-group">
-                    <input type="text" id="name" placeholder="Your name" required>
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="Your name"
+                      required
+                    />
                   </div>
                   <div class="form-group">
-                    <input type="email" id="email" placeholder="Email address" required>
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="Email address"
+                      required
+                    />
                   </div>
                 </div>
 
                 <div class="form-row">
                   <div class="form-group">
-                    <input type="tel" id="tel" placeholder="Telephone">
+                    <input type="tel" id="tel" placeholder="Telephone" />
                   </div>
                   <div class="form-group">
-                    <input type="text" id="location" placeholder="Project location">
+                    <input
+                      type="text"
+                      id="location"
+                      placeholder="Project location"
+                    />
                   </div>
                 </div>
 
@@ -151,27 +179,43 @@
                   <p class="section-title">Project type</p>
                   <div class="radio-grid">
                     <label class="radio-item">
-                      <input type="radio" name="project_type" value="private">
+                      <input type="radio" name="project_type" value="private" />
                       <span class="radio-box"></span>
                       Private Residence
                     </label>
                     <label class="radio-item">
-                      <input type="radio" name="project_type" value="commercial">
+                      <input
+                        type="radio"
+                        name="project_type"
+                        value="commercial"
+                      />
                       <span class="radio-box"></span>
                       Commercial Environment
                     </label>
                     <label class="radio-item">
-                      <input type="radio" name="project_type" value="hospitality">
+                      <input
+                        type="radio"
+                        name="project_type"
+                        value="hospitality"
+                      />
                       <span class="radio-box"></span>
                       Hospitality
                     </label>
                     <label class="radio-item">
-                      <input type="radio" name="project_type" value="advisory">
+                      <input
+                        type="radio"
+                        name="project_type"
+                        value="advisory"
+                      />
                       <span class="radio-box"></span>
                       Advisory
                     </label>
                     <label class="radio-item">
-                      <input type="radio" name="project_type" value="international">
+                      <input
+                        type="radio"
+                        name="project_type"
+                        value="international"
+                      />
                       <span class="radio-box"></span>
                       International Project
                     </label>
@@ -189,17 +233,25 @@
                 </div>
 
                 <div class="form-group">
-                  <textarea id="vision" placeholder="Tell us about your vision" rows="3"></textarea>
+                  <textarea
+                    id="vision"
+                    placeholder="Tell us about your vision"
+                    rows="3"
+                  ></textarea>
                 </div>
 
                 <div class="form-group">
-                  <textarea id="space" placeholder="What would you like the space to become?" rows="3"></textarea>
+                  <textarea
+                    id="space"
+                    placeholder="What would you like the space to become?"
+                    rows="3"
+                  ></textarea>
                 </div>
 
                 <div class="file-upload-wrap">
                   <p class="file-label">Attach the files (optional)</p>
                   <div class="upload-zone">
-                    <input type="file" id="files" multiple>
+                    <input type="file" id="files" multiple />
                     <div class="upload-content">
                       <i class="fas fa-upload"></i>
                       <p><strong>Drag and drop files here or browse</strong></p>
@@ -209,10 +261,14 @@
                 </div>
 
                 <p class="form-footer-note">
-                  By submitting this form, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>
+                  By submitting this form, you agree to our
+                  <a href="#">Privacy Policy</a> and
+                  <a href="#">Terms of Service</a>
                 </p>
 
-                <button type="submit" class="btn btn-submit">SUBMIT PROJECT INTRODUCTION</button>
+                <button type="submit" class="btn btn-submit">
+                  SUBMIT PROJECT INTRODUCTION
+                </button>
               </form>
             </div>
           </div>
@@ -246,61 +302,97 @@
           <div class="section-header centered">
             <h2><span>Frequently Asked Questions</span></h2>
           </div>
-          
+
           <div class="faq-grid">
             <div class="faq-item">
               <h3>What is it like to work with Decaura?</h3>
               <div class="faq-answer">
-                <p>Working with Decaura is a structured and considered experience. From the outset, every stage is clearly guided, ensuring a seamless process where design, execution and communication are handled with precision and care.</p>
+                <p>
+                  Working with Decaura is a structured and considered
+                  experience. From the outset, every stage is clearly guided,
+                  ensuring a seamless process where design, execution and
+                  communication are handled with precision and care.
+                </p>
               </div>
             </div>
 
             <div class="faq-item">
               <h3>How involved will I need to be throughout the project?</h3>
               <div class="faq-answer">
-                <p>We take a highly managed approach, allowing you to remain as involved or as hands-off as you prefer. Our role is to ensure the process feels effortless, while keeping you informed at every key stage.</p>
+                <p>
+                  We take a highly managed approach, allowing you to remain as
+                  involved or as hands-off as you prefer. Our role is to ensure
+                  the process feels effortless, while keeping you informed at
+                  every key stage.
+                </p>
               </div>
             </div>
 
             <div class="faq-item">
               <h3>How do you ensure the final result meets expectations?</h3>
               <div class="faq-answer">
-                <p>Every project is guided by a clearly defined brief, detailed planning and continuous oversight. This ensures that all decisions remain aligned with the agreed vision, resulting in a space that is both considered and accurately delivered.</p>
+                <p>
+                  Every project is guided by a clearly defined brief, detailed
+                  planning and continuous oversight. This ensures that all
+                  decisions remain aligned with the agreed vision, resulting in
+                  a space that is both considered and accurately delivered.
+                </p>
               </div>
             </div>
 
             <div class="faq-item">
               <h3>How are budgets managed throughout the project?</h3>
               <div class="faq-answer">
-                <p>We establish a clear financial framework early in the process and maintain careful oversight throughout. This ensures that design intent and investment remain aligned, with full transparency at every stage.</p>
+                <p>
+                  We establish a clear financial framework early in the process
+                  and maintain careful oversight throughout. This ensures that
+                  design intent and investment remain aligned, with full
+                  transparency at every stage.
+                </p>
               </div>
             </div>
 
             <div class="faq-item">
               <h3>What level of quality can I expect?</h3>
               <div class="faq-answer">
-                <p>We work to a consistently high standard across every aspect of the project, from materials and finishes to execution and detailing, ensuring a refined and enduring result.</p>
+                <p>
+                  We work to a consistently high standard across every aspect of
+                  the project, from materials and finishes to execution and
+                  detailing, ensuring a refined and enduring result.
+                </p>
               </div>
             </div>
 
             <div class="faq-item">
               <h3>How do you handle project timelines?</h3>
               <div class="faq-answer">
-                <p>We provide clear timelines from the outset and manage every stage of delivery to ensure milestones are met. Our structured approach allows us to maintain momentum and deliver with predictability.</p>
+                <p>
+                  We provide clear timelines from the outset and manage every
+                  stage of delivery to ensure milestones are met. Our structured
+                  approach allows us to maintain momentum and deliver with
+                  predictability.
+                </p>
               </div>
             </div>
 
             <div class="faq-item">
               <h3>Do you manage contractors and suppliers?</h3>
               <div class="faq-answer">
-                <p>Yes. All aspects of execution are coordinated and overseen by our team, ensuring consistency, quality, and alignment with the design.</p>
+                <p>
+                  Yes. All aspects of execution are coordinated and overseen by
+                  our team, ensuring consistency, quality, and alignment with
+                  the design.
+                </p>
               </div>
             </div>
 
             <div class="faq-item">
               <h3>Can Decaura work on projects outside of Nigeria?</h3>
               <div class="faq-answer">
-                <p>Yes. Our approach is not limited by location, and we are able to take on projects across different regions where required.</p>
+                <p>
+                  Yes. Our approach is not limited by location, and we are able
+                  to take on projects across different regions where required.
+                </p>
               </div>
             </div>
           </div>
@@ -342,7 +434,10 @@
                 class="social-icon"
                 ><i class="far fa-envelope"></i
               ></a>
-              <a href="tel:+2340000000000" aria-label="Phone" class="social-icon"
+              <a
+                href="tel:+2340000000000"
+                aria-label="Phone"
+                class="social-icon"
                 ><i class="fas fa-phone"></i
               ></a>
             </div>
@@ -368,7 +463,9 @@
               <li>
                 <a href="./approach.html#services">Full Design & Delivery</a>
               </li>
-              <li><a href="./approach.html#services">Design Consultation</a></li>
+              <li>
+                <a href="./approach.html#services">Design Consultation</a>
+              </li>
             </ul>
           </div>
 
@@ -388,7 +485,9 @@
       <div class="footer-full-bottom">
         <div class="container">
           <p class="ff-copy">@DECAURA STUDIO</p>
-          <p class="ff-motto">Thoughtful by design. Delivered with precision.</p>
+          <p class="ff-motto">
+            Thoughtful by design. Delivered with precision.
+          </p>
           <div class="ff-bottom-links">
             <a href="#">PRIVACY POLICY</a>
             <a href="#">TERMS OF SERVICE</a>
@@ -398,5 +497,18 @@
     </footer>
 
     <script src="./scripts/main.js"></script>
+    <a
+      href="https://wa.me/8109008366"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+    >
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+        />
+      </svg>
+    </a>
   </body>
 </html>

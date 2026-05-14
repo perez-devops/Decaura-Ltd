@@ -26,6 +26,7 @@
     />
   </head>
   <body>
+    <div class="nav-overlay"></div>
     <nav class="navbar">
       <div class="nav-logo">
         <img
@@ -37,12 +38,16 @@
           fetchpriority="high"
         />
       </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
       <div class="nav-links">
         <ul>
           <li><a href="#" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="./approach.html">Approach</a></li>
           <li><a href="./portfolio.html">Portfolio</a></li>
+          <li class="mobile-only"><a href="./contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="nav-cta">
@@ -804,7 +809,10 @@
                 class="social-icon"
                 ><i class="far fa-envelope"></i
               ></a>
-              <a href="tel:+2340000000000" aria-label="Phone" class="social-icon"
+              <a
+                href="tel:+2340000000000"
+                aria-label="Phone"
+                class="social-icon"
                 ><i class="fas fa-phone"></i
               ></a>
             </div>
@@ -830,7 +838,9 @@
               <li>
                 <a href="./approach.html#services">Full Design & Delivery</a>
               </li>
-              <li><a href="./approach.html#services">Design Consultation</a></li>
+              <li>
+                <a href="./approach.html#services">Design Consultation</a>
+              </li>
             </ul>
           </div>
 
@@ -850,7 +860,9 @@
       <div class="footer-full-bottom">
         <div class="container">
           <p class="ff-copy">@DECAURA STUDIO</p>
-          <p class="ff-motto">Thoughtful by design. Delivered with precision.</p>
+          <p class="ff-motto">
+            Thoughtful by design. Delivered with precision.
+          </p>
           <div class="ff-bottom-links">
             <a href="#">PRIVACY POLICY</a>
             <a href="#">TERMS OF SERVICE</a>
@@ -859,7 +871,7 @@
       </div>
     </footer>
     <a
-      href="https://wa.me/971000000000"
+      href="https://wa.me/8109008366"
       class="whatsapp-float"
       target="_blank"
       rel="noopener"
