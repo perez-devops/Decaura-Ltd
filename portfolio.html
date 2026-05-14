@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio – Decaura</title>
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/portfolio.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./images/company-logos/decaura-favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="portfolio-page">
+    <!-- ══════════════════════════════
+         NAVIGATION
+    ══════════════════════════════ -->
+    <nav class="navbar scrolled">
+      <div class="nav-logo">
+        <img
+          src="./images/company-logos/Decaura logo A.png"
+          alt="Decaura"
+          decoding="async"
+          width="180"
+          height="40"
+          fetchpriority="high"
+        />
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./approach.html">Approach</a></li>
+          <li><a href="./portfolio.html" class="active">Portfolio</a></li>
+        </ul>
+      </div>
+      <div class="nav-cta">
+        <a href="./contact.html" class="btn btn-contact">Contact</a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ══════════════════════════════
+             PORTFOLIO HERO
+        ══════════════════════════════ -->
+      <section class="portfolio-hero reveal">
+        <div class="hero-bg">
+          <img src="./images/Featured works/Featured Image 1.webp" alt="Portfolio Hero" />
+        </div>
+        <div class="container">
+          <div class="portfolio-content">
+            <h1>Spaces shaped by vision. <br />Defined by detail.</h1>
+            <p>
+              A curated collection of residential and commercial projects
+              crafted with precision, intention and timeless sophistication.
+            </p>
+            <a href="#projects" class="btn btn-bronze">
+              VIEW PORTFOLIO <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+             PORTFOLIO GRID
+        ══════════════════════════════ -->
+      <section class="portfolio-section reveal" id="projects">
+        <div class="container">
+          <!-- Filter -->
+          <div class="portfolio-filter">
+            <button class="filter-btn active" data-filter="all">ALL</button>
+            <button class="filter-btn" data-filter="residential">Residential</button>
+            <button class="filter-btn" data-filter="commercial">Commercial</button>
+          </div>
+
+          <div class="portfolio-grid">
+            <!-- Row 1: Large Cards (2 Columns) -->
+            <div class="portfolio-item large residential" data-category="residential">
+              <div class="item-image">
+                <img src="./images/Featured works/Featured Image 1.webp" alt="Ikoyi Residence" />
+              </div>
+              <div class="item-overlay">
+                <span class="category">RESIDENTIAL</span>
+                <h3>Ikoyi Residence</h3>
+                <p>A study in warmth, texture and proposition. Layered neutrals create a calm, timeless home.</p>
+                <a href="#" class="view-btn">VIEW PORTFOLIO <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="portfolio-item large residential" data-category="residential">
+              <div class="item-image">
+                <img src="./images/Featured works/Featured Image 2.webp" alt="Banana Island Home" />
+              </div>
+              <div class="item-overlay">
+                <span class="category">RESIDENTIAL</span>
+                <h3>Banana Island Home</h3>
+                <p>A serene sanctuary defined by natural textures, curated sculptural forms, and a muted, earthy palette that invites lasting comfort.</p>
+                <a href="#" class="view-btn">VIEW PORTFOLIO <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Row 2: Medium Cards (3 Columns) -->
+            <div class="portfolio-item medium commercial" data-category="commercial">
+              <div class="item-image">
+                <img src="./images/Featured works/Featured Image 4.webp" alt="Lagos Workspace" />
+              </div>
+              <div class="item-overlay">
+                <span class="category">COMMERCIAL</span>
+                <h3>Lagos Workspace</h3>
+                <p>An exercise in quiet luxury: matte plaster walls, aged oak, and brushed metal create a tactile, well-balanced home designed for timeless living.</p>
+                <a href="#" class="view-btn">VIEW PORTFOLIO <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="portfolio-item medium hospitality" data-category="commercial">
+              <div class="item-image">
+                <img src="./images/Featured works/Featured Image 3.webp" alt="Boutique Hotel" />
+              </div>
+              <div class="item-overlay">
+                <span class="category">HOSPITALITY</span>
+                <h3>Boutique Hotel</h3>
+                <p>This home is a study in soft contrasts, blending tactile fabrics with raw stone to create a warm, inviting, and effortlessly chic environment.</p>
+                <a href="#" class="view-btn">VIEW PORTFOLIO <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="portfolio-item medium bespoke" data-category="commercial">
+              <div class="item-image">
+                <img src="./images/Featured works/Featured Image 13.webp" alt="Custom Joinery" />
+              </div>
+              <div class="item-overlay">
+                <span class="category">BESPOKE</span>
+                <h3>Custom Joinery</h3>
+                <p>A harmonious blend of form and feeling, where organic materials meet precise craftsmanship, curating a space that is comforting, enduring, and refined.</p>
+                <a href="#" class="view-btn">VIEW PORTFOLIO <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+             QUOTE SECTION
+        ══════════════════════════════ -->
+      <section class="portfolio-quote reveal">
+        <div class="container">
+          <blockquote>
+            Every project is a collaboration. <br />
+            Every space is a reflection.
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+             FINAL CTA
+        ══════════════════════════════ -->
+      <section class="cta-section reveal" id="contact">
+        <div class="container">
+          <h2>Refinement Begins Here.</h2>
+          <p>Where design is not only envisioned but precisely realised.</p>
+          <a href="./contact.html" class="btn-cta">Begin Your Project</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ══════════════════════════════
+         FOOTER
+    ══════════════════════════════ -->
+    <footer class="footer-full">
+      <div class="container">
+        <div class="footer-full-grid">
+          <!-- Col 1: Brand -->
+          <div class="ff-brand">
+            <img
+              src="./images/company-logos/Decaura logo A.png"
+              alt="Decaura"
+              class="ff-logo"
+              loading="lazy"
+              decoding="async"
+              width="180"
+              height="40"
+            />
+            <p class="ff-tagline">
+              Blending international design sensibility with local Nigerian
+              market expertise to create unparalleled luxury spaces.
+            </p>
+            <div class="ff-socials">
+              <a href="#" aria-label="Instagram" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn" class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="mailto:hello@decaura.com"
+                aria-label="Email"
+                class="social-icon"
+                ><i class="far fa-envelope"></i
+              ></a>
+              <a href="tel:+2340000000000" aria-label="Phone" class="social-icon"
+                ><i class="fas fa-phone"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Col 2: Studio -->
+          <div class="ff-col">
+            <h4>Studio</h4>
+            <ul>
+              <li><a href="./about.html">About Decaura</a></li>
+              <li><a href="./approach.html">Our Approach</a></li>
+              <li><a href="./portfolio.html">Portfolio</a></li>
+              <li><a href="./contact.html">Contact us</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Services -->
+          <div class="ff-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="./approach.html#services">Interior Design</a></li>
+              <li><a href="./approach.html#services">Project Management</a></li>
+              <li>
+                <a href="./approach.html#services">Full Design & Delivery</a>
+              </li>
+              <li><a href="./approach.html#services">Design Consultation</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Selected Work -->
+          <div class="ff-col">
+            <h4>Selected Work</h4>
+            <ul>
+              <li><a href="#">Ikoyi Residence</a></li>
+              <li><a href="#">Boutique Hotel</a></li>
+              <li><a href="#">Lagos Workspace</a></li>
+              <li><a href="#">Banana Island Home</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-full-bottom">
+        <div class="container">
+          <p class="ff-copy">@DECAURA STUDIO</p>
+          <p class="ff-motto">Thoughtful by design. Delivered with precision.</p>
+          <div class="ff-bottom-links">
+            <a href="#">PRIVACY POLICY</a>
+            <a href="#">TERMS OF SERVICE</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./scripts/main.js"></script>
+    <script>
+      // Simple filter logic
+      document.addEventListener('DOMContentLoaded', () => {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            // Update active state
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.dataset.filter;
+
+            portfolioItems.forEach(item => {
+              if (filter === 'all' || item.dataset.category === filter) {
+                item.style.display = 'block';
+              } else {
+                item.style.display = 'none';
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

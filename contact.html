@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact – Decaura</title>
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./images/company-logos/decaura-favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ══════════════════════════════
+         NAVIGATION
+    ══════════════════════════════ -->
+    <nav class="navbar">
+      <div class="nav-logo">
+        <img
+          src="./images/company-logos/Decaura logo A.png"
+          alt="Decaura"
+          decoding="async"
+          width="180"
+          height="40"
+          fetchpriority="high"
+        />
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./approach.html">Approach</a></li>
+          <li><a href="./portfolio.html">Portfolio</a></li>
+        </ul>
+      </div>
+      <div class="nav-cta">
+        <a href="./contact.html" class="btn btn-contact active">Contact</a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ══════════════════════════════
+             CONTACT HERO
+        ══════════════════════════════ -->
+      <section class="contact-hero reveal">
+        <div class="hero-overlay"></div>
+        <div class="container">
+          <div class="contact-hero-content">
+            <h1>Begin a private conversation.</h1>
+            <p>
+              Every Decaura project begins with understanding – your vision, your lifestyle, 
+              your investment, and the way you want a space to feel.
+            </p>
+            <a href="#contact-form" class="btn btn-bronze">
+              SCHEDULE A CONSULTATION <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+             CONTACT SECTION
+        ══════════════════════════════ -->
+      <section class="contact-main reveal" id="contact-form">
+        <div class="container">
+          <div class="contact-layout">
+            
+            <!-- LEFT COLUMN: OFFICE INFO -->
+            <div class="contact-info">
+              <div class="info-block">
+                <span class="info-label">PRIVATE CLIENT OFFICE</span>
+                <div class="info-item">
+                  <div class="info-icon"><i class="fas fa-location-dot"></i></div>
+                  <div class="info-text">
+                    <h3>LAGOS, NIGERIA</h3>
+                    <p>The Design House,<br>Lekki Phase 1</p>
+                  </div>
+                </div>
+                
+                <div class="info-item">
+                  <div class="info-icon"><i class="far fa-calendar"></i></div>
+                  <div class="info-text">
+                    <h3>APPOINTMENTS</h3>
+                    <p>By prior arrangements</p>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon"><i class="fas fa-phone"></i></div>
+                  <div class="info-text">
+                    <h3>TELEPHONE</h3>
+                    <p>+234(0) 810 900 8366</p>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon"><i class="far fa-envelope"></i></div>
+                  <div class="info-text">
+                    <h3>EMAIL</h3>
+                    <p>private@decaura.com</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- DIRECT CALL BOX -->
+              <div class="direct-call-card">
+                <h3>Prefer a Direct Call?</h3>
+                <p>Schedule a private discovery call at a time that suits your calendar perfectly.</p>
+                <a href="#" class="book-link">BOOK A CALL <i class="fas fa-arrow-right"></i></a>
+                <div class="clock-icon-bg">
+                  <i class="far fa-clock"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN: FORM -->
+            <div class="contact-form-wrap">
+              <span class="info-label">PROJECT INTRODUCTION</span>
+              <form class="project-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <input type="text" id="name" placeholder="Your name" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="email" id="email" placeholder="Email address" required>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <input type="tel" id="tel" placeholder="Telephone">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" id="location" placeholder="Project location">
+                  </div>
+                </div>
+
+                <div class="form-section">
+                  <p class="section-title">Project type</p>
+                  <div class="radio-grid">
+                    <label class="radio-item">
+                      <input type="radio" name="project_type" value="private">
+                      <span class="radio-box"></span>
+                      Private Residence
+                    </label>
+                    <label class="radio-item">
+                      <input type="radio" name="project_type" value="commercial">
+                      <span class="radio-box"></span>
+                      Commercial Environment
+                    </label>
+                    <label class="radio-item">
+                      <input type="radio" name="project_type" value="hospitality">
+                      <span class="radio-box"></span>
+                      Hospitality
+                    </label>
+                    <label class="radio-item">
+                      <input type="radio" name="project_type" value="advisory">
+                      <span class="radio-box"></span>
+                      Advisory
+                    </label>
+                    <label class="radio-item">
+                      <input type="radio" name="project_type" value="international">
+                      <span class="radio-box"></span>
+                      International Project
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group select-group">
+                  <select id="investment" required>
+                    <option value="" disabled selected>Investment range</option>
+                    <option value="range1">₦10M - ₦50M</option>
+                    <option value="range2">₦50M - ₦100M</option>
+                    <option value="range3">₦100M+</option>
+                  </select>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+
+                <div class="form-group">
+                  <textarea id="vision" placeholder="Tell us about your vision" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <textarea id="space" placeholder="What would you like the space to become?" rows="3"></textarea>
+                </div>
+
+                <div class="file-upload-wrap">
+                  <p class="file-label">Attach the files (optional)</p>
+                  <div class="upload-zone">
+                    <input type="file" id="files" multiple>
+                    <div class="upload-content">
+                      <i class="fas fa-upload"></i>
+                      <p><strong>Drag and drop files here or browse</strong></p>
+                      <p class="file-hint">PDF, JPG, PNG up to 10MB</p>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="form-footer-note">
+                  By submitting this form, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>
+                </p>
+
+                <button type="submit" class="btn btn-submit">SUBMIT PROJECT INTRODUCTION</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ══════════════════════════════
+             THE DECAURA EXPERIENCE
+        ══════════════════════════════ -->
+      <section class="experience-section reveal">
+        <div class="container">
+          <span class="experience-label">THE DECAURA EXPERIENCE</span>
+          <div class="experience-grid">
+            <div class="experience-item">DISCRETION</div>
+            <div class="experience-divider"></div>
+            <div class="experience-item">CLARITY</div>
+            <div class="experience-divider"></div>
+            <div class="experience-item">TRANSPARENCY</div>
+            <div class="experience-divider"></div>
+            <div class="experience-item">PRECISION</div>
+            <div class="experience-divider"></div>
+            <div class="experience-item">ACCOUNTABILITY</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+             FREQUENTLY ASKED QUESTIONS
+        ══════════════════════════════ -->
+      <section class="faq-section reveal">
+        <div class="container">
+          <div class="section-header centered">
+            <h2><span>Frequently Asked Questions</span></h2>
+          </div>
+          
+          <div class="faq-grid">
+            <div class="faq-item">
+              <h3>What is it like to work with Decaura?</h3>
+              <div class="faq-answer">
+                <p>Working with Decaura is a structured and considered experience. From the outset, every stage is clearly guided, ensuring a seamless process where design, execution and communication are handled with precision and care.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <h3>How involved will I need to be throughout the project?</h3>
+              <div class="faq-answer">
+                <p>We take a highly managed approach, allowing you to remain as involved or as hands-off as you prefer. Our role is to ensure the process feels effortless, while keeping you informed at every key stage.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <h3>How do you ensure the final result meets expectations?</h3>
+              <div class="faq-answer">
+                <p>Every project is guided by a clearly defined brief, detailed planning and continuous oversight. This ensures that all decisions remain aligned with the agreed vision, resulting in a space that is both considered and accurately delivered.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <h3>How are budgets managed throughout the project?</h3>
+              <div class="faq-answer">
+                <p>We establish a clear financial framework early in the process and maintain careful oversight throughout. This ensures that design intent and investment remain aligned, with full transparency at every stage.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <h3>What level of quality can I expect?</h3>
+              <div class="faq-answer">
+                <p>We work to a consistently high standard across every aspect of the project, from materials and finishes to execution and detailing, ensuring a refined and enduring result.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <h3>How do you handle project timelines?</h3>
+              <div class="faq-answer">
+                <p>We provide clear timelines from the outset and manage every stage of delivery to ensure milestones are met. Our structured approach allows us to maintain momentum and deliver with predictability.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <h3>Do you manage contractors and suppliers?</h3>
+              <div class="faq-answer">
+                <p>Yes. All aspects of execution are coordinated and overseen by our team, ensuring consistency, quality, and alignment with the design.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <h3>Can Decaura work on projects outside of Nigeria?</h3>
+              <div class="faq-answer">
+                <p>Yes. Our approach is not limited by location, and we are able to take on projects across different regions where required.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ══════════════════════════════
+         FOOTER
+    ══════════════════════════════ -->
+    <footer class="footer-full">
+      <div class="container">
+        <div class="footer-full-grid">
+          <!-- Col 1: Brand -->
+          <div class="ff-brand">
+            <img
+              src="./images/company-logos/Decaura logo A.png"
+              alt="Decaura"
+              class="ff-logo"
+              loading="lazy"
+              decoding="async"
+              width="180"
+              height="40"
+            />
+            <p class="ff-tagline">
+              Blending international design sensibility with local Nigerian
+              market expertise to create unparalleled luxury spaces.
+            </p>
+            <div class="ff-socials">
+              <a href="#" aria-label="Instagram" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn" class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="mailto:hello@decaura.com"
+                aria-label="Email"
+                class="social-icon"
+                ><i class="far fa-envelope"></i
+              ></a>
+              <a href="tel:+2340000000000" aria-label="Phone" class="social-icon"
+                ><i class="fas fa-phone"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Col 2: Studio -->
+          <div class="ff-col">
+            <h4>Studio</h4>
+            <ul>
+              <li><a href="./about.html">About Decaura</a></li>
+              <li><a href="./approach.html">Our Approach</a></li>
+              <li><a href="./portfolio.html">Portfolio</a></li>
+              <li><a href="./contact.html">Contact us</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Services -->
+          <div class="ff-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="./approach.html#services">Interior Design</a></li>
+              <li><a href="./approach.html#services">Project Management</a></li>
+              <li>
+                <a href="./approach.html#services">Full Design & Delivery</a>
+              </li>
+              <li><a href="./approach.html#services">Design Consultation</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Selected Work -->
+          <div class="ff-col">
+            <h4>Selected Work</h4>
+            <ul>
+              <li><a href="#">Ikoyi Residence</a></li>
+              <li><a href="#">Boutique Hotel</a></li>
+              <li><a href="#">Lagos Workspace</a></li>
+              <li><a href="#">Banana Island Home</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-full-bottom">
+        <div class="container">
+          <p class="ff-copy">@DECAURA STUDIO</p>
+          <p class="ff-motto">Thoughtful by design. Delivered with precision.</p>
+          <div class="ff-bottom-links">
+            <a href="#">PRIVACY POLICY</a>
+            <a href="#">TERMS OF SERVICE</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
