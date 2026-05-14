@@ -386,6 +386,8 @@ h1, h2, h3, h4 {
     filter: none;
 }
 
+.nav-toggle { display: none; }
+
 .nav-links ul {
     display: flex;
     gap: 54px;
