@@ -394,10 +394,12 @@
 @media (max-width: 1024px) {
     .who-layout,
     .founder-layout     { grid-template-columns: 1fr; gap: 48px; }
-    .who-image img      { height: 380px; }
-    .founder-image img  { height: 480px; object-position: center top; }
+    .who-image img      { height: 100%; }
+    .founder-image img  { height: 100%; object-position: center top; }
     .foundation-pillars { grid-template-columns: repeat(2, 1fr); }
     .foundation-body    { grid-template-columns: 1fr; gap: 16px; }
+    .who-section,
+    .founder-section    { padding: 72px 0; }
 }
 
 @media (max-width: 768px) {
@@ -405,4 +407,20 @@
     .about-hero         { height: 60vh; }
     .foundation-pillars { grid-template-columns: 1fr; }
     .foundation-closing { grid-column: 1; }
+    .who-image img      { height: 100%; }
+    .founder-image img  { height: 100%; }
+    .who-section,
+    .founder-section    { padding: 56px 0; }
+    .pillar-number      { font-size: clamp(20px, 5vw, 28px); }
+    .pillar h3          { font-size: clamp(16px, 4vw, 20px); }
+    .foundation-areas-lead { font-size: clamp(15px, 3.5vw, 18px); }
+}
+
+@media (max-width: 480px) {
+    .who-image img      { height: 100%; }
+    .founder-image img  { height: 100%; }
+    .who-section,
+    .founder-section    { padding: 48px 0; }
+    .philosophy-section,
+    .foundation-section { padding: 48px 0; }
 }

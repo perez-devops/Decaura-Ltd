@@ -444,7 +444,7 @@
 }
 
 .faq-answer p {
-    font-size: 13.5px;
+    font-size: 14px;
     line-height: 1.8;
     color: var(--warm-graphite);
     font-weight: 300;
@@ -503,10 +503,26 @@
     }
 
     .radio-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .contact-hero {
         height: 60vh;
     }
+
+    .contact-main { padding: 72px 0; }
+    .faq-section { padding: 72px 0 80px; }
+    .direct-call-card h3 { font-size: clamp(18px, 5vw, 24px); }
+}
+
+@media (max-width: 480px) {
+    .contact-main { padding: 56px 0; }
+    .upload-zone { padding: 32px 16px; }
+    .btn-submit { padding: 16px; font-size: 11px; }
+    .radio-grid { grid-template-columns: 1fr; }
+    .faq-grid { gap: 0; }
+    .faq-section { padding: 56px 0 64px; }
+    .direct-call-card { padding: 32px 24px; }
+    .direct-call-card h3 { font-size: 20px; }
+    .faq-item h3 { font-size: 14px; }
 }

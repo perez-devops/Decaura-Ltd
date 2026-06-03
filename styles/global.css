@@ -333,14 +333,15 @@ h1, h2, h3, h4 {
     border-color: #ba9e6b;
 }
 .btn-ghost {
-    background: #CDB68D;
-    color: var(--pure-white);
+    background: transparent;
+    color: #CDB68D;
     border: 1px solid #CDB68D;
     padding: 12px 28px;
 }
 .btn-ghost:hover {
-    background: #ba9e6b;
-    border-color: #ba9e6b;
+    background: #CDB68D;
+    color: var(--pure-white);
+    border-color: #CDB68D;
 }
 
 .begin-project {
@@ -525,7 +526,7 @@ h1, h2, h3, h4 {
 }
 .hero-sub {
     font-family: var(--sans);
-    font-size: 22px;
+    font-size: clamp(14px, 2.2vw, 22px);
     font-weight: 200;
     color: var(--pure-white);
     letter-spacing: 0.03em;
@@ -609,7 +610,7 @@ h1, h2, h3, h4 {
 }
 .quote-sub {
     font-family: var(--sans);
-    font-size: 30px;
+    font-size: clamp(16px, 2.8vw, 30px);
     font-weight: 300;
     color: var(--warm-graphite);
     text-transform: none;
@@ -1006,7 +1007,7 @@ h1, h2, h3, h4 {
     padding: 20px 0;
     border-bottom: 1px solid var(--shadow-grey);
     font-family: var(--serif);
-    font-size: 20px;
+    font-size: clamp(15px, 2vw, 20px);
     font-weight: 300;
     color: var(--warm-graphite);
     cursor: pointer;
@@ -1438,7 +1439,7 @@ h1, h2, h3, h4 {
         display: block;
         width: 24px;
         height: 1.5px;
-        background: var(--ink-black);
+        background: var(--pure-white);
         position: relative;
         transition: all 0.3s ease;
     }
@@ -1448,7 +1449,7 @@ h1, h2, h3, h4 {
         left: 0;
         width: 100%;
         height: 1.5px;
-        background: var(--ink-black);
+        background: var(--pure-white);
         transition: all 0.3s ease;
     }
     .hamburger::before { top: -8px; }
@@ -1457,6 +1458,14 @@ h1, h2, h3, h4 {
     .nav-toggle.active .hamburger { background: transparent; }
     .nav-toggle.active .hamburger::before { transform: rotate(45deg); top: 0; }
     .nav-toggle.active .hamburger::after { transform: rotate(-45deg); bottom: 0; }
+
+    /* Hamburger turns dark once navbar has scrolled background */
+    .navbar.scrolled .hamburger,
+    .navbar.scrolled .hamburger::before,
+    .navbar.scrolled .hamburger::after { background: var(--ink-black); }
+
+    /* Active nav link must be dark/bronze in the white mobile menu panel */
+    .nav-links ul li a.active { color: var(--brushed-bronze) !important; }
 
     .mobile-only { display: block; }
     
@@ -1552,11 +1561,28 @@ h1, h2, h3, h4 {
         text-align: center;
     }
     .logos-row { gap: 24px; }
+
+    /* CTA section */
+    .cta-section { padding: 80px 0; }
+    .btn-cta { padding: 16px 28px; font-size: 12px; }
+
+    /* Hero tweaks */
+    .hero-sub { margin-bottom: 32px; }
+    .hero-eyebrow { font-size: 11px; }
+
+    /* Why layout stacks */
+    .why-layout { grid-template-columns: 1fr; gap: 40px; }
+
+    /* Featured second heading */
+    .featured-second-heading { font-size: 11px; letter-spacing: 1px; margin-bottom: 36px; }
 }
 
 @media (max-width: 480px) {
     .work-slide { width: 220px; height: 220px; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    .hero-heading { font-size: 36px; }
+    .hero-heading { font-size: clamp(32px, 9vw, 44px); }
     .hero-indicators { display: none; }
+    .hero-sub { font-size: 13px; }
+    .btn-cta { padding: 14px 24px; font-size: 11px; width: 100%; max-width: 320px; }
+    .cta-section { padding: 64px 0; }
 }
