@@ -40,12 +40,12 @@
 }
 .approach-content p {
     font-family: var(--sans);
-    font-size: clamp(14px, 1.1vw, 17px);
+    font-size: clamp(14px, 1.1vw, 22px);
     font-weight: 300;
     line-height: 1.7;
     margin-bottom: 42px;
     opacity: 0.9;
-    max-width: 480px;
+    max-width: 600px;
 }
 
 
@@ -53,7 +53,7 @@
    OUR SERVICES (Grid Layout)
 ══════════════════════════════ */
 .services-section {
-    background: #F9F8F6; /* Slightly warmer off-white as in image */
+    background: var(--porcelain-white); /* Slightly warmer off-white as in image */
     padding: 100px 0;
 }
 .services-section .section-header {
@@ -97,9 +97,8 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
 }
-.service-card {
-    background: #F4F1EC; /* Light beige card as in image */
-    border: 1px solid #E5E0D8;
+.service-card { /* Light beige card as in image */
+    border: 1px solid #CDB68D;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -273,7 +272,7 @@
    OUR PROCESS (Timeline)
    ════════════════════════════════════════════════════════════ */
 .process-section {
-    background: #F9F8F6;
+    background: var(--porcelain-white);
     padding: 120px 0;
     overflow: hidden;
 }
@@ -389,14 +388,13 @@
    QUOTE SECTION
    ════════════════════════════════════════════════════════════ */
 .quote-section {
-    background: #F4F1EC;
     padding: 160px 0;
     text-align: center;
 }
 
 .quote-content blockquote {
     font-family: var(--serif);
-    font-size: clamp(40px, 6vw, 84px);
+    font-size: clamp(40px, 6vw, 60px);
     line-height: 1.1;
     color: var(--ink-black);
     font-weight: 400;

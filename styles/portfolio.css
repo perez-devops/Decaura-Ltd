@@ -15,7 +15,7 @@
 }
 .portfolio-page .navbar.scrolled .nav-cta .btn-contact {
     background: #CDB68D;
-    color: var(--ink-black);
+    color: var(--pure-white);
 }
 
 /* --- Hero --- */
@@ -79,7 +79,7 @@
 
 .btn-bronze {
     background: #CDB68D;
-    color: var(--ink-black);
+    color: var(--pure-white);
     padding: 12px 28px;
     font-size: 11px;
     letter-spacing: 0.14em;
@@ -120,7 +120,7 @@
 
 .filter-btn.active {
     background: #CDB68D;
-    color: var(--ink-black);
+    color: var(--pure-white);
 }
 
 /* --- Grid --- */
@@ -212,7 +212,7 @@
     gap: 10px;
     font-size: 10px;
     font-weight: 500;
-    color: var(--ink-black);
+    color: var(--pure-white);
     background: #CDB68D;
     padding: 12px 20px;
     width: fit-content;

@@ -360,7 +360,7 @@
 .btn-submit {
     width: 100%;
     background: #CDB68D;
-    color: var(--ink-black);
+    color: var(--pure-white);
     border: none;
     padding: 20px;
     font-size: 12px;
@@ -400,7 +400,7 @@
 
 .experience-item {
     font-family: var(--serif);
-    font-size: clamp(16px, 2.5vw, 28px);
+    font-size: clamp(16px, 2.5vw, 20px);
     letter-spacing: 0.05em;
     padding: 0 40px;
     color: var(--ink-black);
