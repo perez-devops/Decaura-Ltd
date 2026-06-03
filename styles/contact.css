@@ -359,19 +359,20 @@
 /* Submit Button */
 .btn-submit {
     width: 100%;
-    background: #CDB68D;
-    color: var(--pure-white);
-    border: none;
+    background: transparent;
+    color: #CDB68D;
+    border: 1px solid #CDB68D;
     padding: 20px;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.15em;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .btn-submit:hover {
-    background: #ba9e6b;
+    background: #CDB68D;
+    color: var(--pure-white);
 }
 
 /* ── EXPERIENCE SECTION ──────────────────────────────────────── */

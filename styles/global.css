@@ -311,17 +311,17 @@ h1, h2, h3, h4 {
     cursor: pointer;
 }
 .btn-bronze {
-    background: #CDB68D;
+    background: transparent;
     color: var(--pure-white);
-    border: 1px solid #CDB68D;
+    border: 1px solid var(--pure-white);
 }
 .btn-bronze:hover {
-    background: #ba9e6b;
-    border-color: #ba9e6b;
+    background: #CDB68D;
+    border-color: #CDB68D;
 }
 .btn-contact {
-    background: #CDB68D;
-    color: var(--pure-white);
+    background: transparent;
+    color: #CDB68D;
     border: 1px solid #CDB68D;
     padding: 10px 24px;
     font-size: 11px;
@@ -329,8 +329,9 @@ h1, h2, h3, h4 {
     border-radius: 1px;
 }
 .btn-contact:hover {
-    background: #ba9e6b;
-    border-color: #ba9e6b;
+    background: #CDB68D;
+    color: var(--pure-white);
+    border-color: #CDB68D;
 }
 .btn-ghost {
     background: transparent;
@@ -345,10 +346,10 @@ h1, h2, h3, h4 {
 }
 
 .begin-project {
-    width: 250px;
-    display: flex;
+    display: inline-flex;
+    align-self: flex-start;
     gap: 10px;
-    padding: 20px 0px 20px 0px;
+    padding: clamp(14px, 2vw, 18px) clamp(24px, 4vw, 40px);
     justify-content: center;
     align-items: center;
     font-size: 11px;
@@ -1583,6 +1584,6 @@ h1, h2, h3, h4 {
     .hero-heading { font-size: clamp(32px, 9vw, 44px); }
     .hero-indicators { display: none; }
     .hero-sub { font-size: 13px; }
-    .btn-cta { padding: 14px 24px; font-size: 11px; width: 100%; max-width: 320px; }
+    .btn-cta { padding: 14px 32px; font-size: 11px; }
     .cta-section { padding: 64px 0; }
 }
