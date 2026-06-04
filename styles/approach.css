@@ -40,7 +40,7 @@
 }
 .approach-content p {
     font-family: var(--sans);
-    font-size: clamp(14px, 1.1vw, 22px);
+    font-size: clamp(15px, 2.2vw, 22px);
     font-weight: 300;
     line-height: 1.7;
     margin-bottom: 42px;
@@ -382,7 +382,7 @@
 
 .process-info p {
     font-family: var(--sans);
-    font-size: 12px;
+    font-size: clamp(12px, 1.1vw, 13px);
     font-weight: 300;
     color: var(--warm-graphite);
     line-height: 1.8;
@@ -471,7 +471,7 @@
 }
 .cta-about p {
     font-family: var(--sans);
-    font-size: 15px;
+    font-size: clamp(14px, 1.4vw, 15px);
     font-weight: 300;
     color: var(--warm-graphite);
     max-width: 500px;

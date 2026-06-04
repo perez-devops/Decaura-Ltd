@@ -248,13 +248,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /* ──────────────────────────────────────────────────────
-       5.  NAVBAR  –  transparent → solid white on scroll
+       5.  NAVBAR  –  sticky clone, no position switching
     ──────────────────────────────────────────────────────── */
     const navbar = document.querySelector('.navbar');
     if (navbar) {
-        const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 20);
+        // Create a permanently fixed sticky clone — position never changes,
+        // only transform + opacity animate (GPU-accelerated, no reflow on mobile)
+        const sticky = navbar.cloneNode(true);
+        sticky.classList.add('navbar--sticky');
+        document.body.appendChild(sticky);
+
+        // Wire the sticky hamburger to its own cloned nav-links panel
+        const navOverlayEl   = document.querySelector('.nav-overlay');
+        const stickyToggle   = sticky.querySelector('.nav-toggle');
+        const stickyLinks    = sticky.querySelector('.nav-links');
+
+        if (stickyToggle && stickyLinks && navOverlayEl) {
+            stickyToggle.addEventListener('click', () => {
+                stickyToggle.classList.toggle('active');
+                stickyLinks.classList.toggle('active');
+                navOverlayEl.classList.toggle('active');
+                document.body.style.overflow = stickyLinks.classList.contains('active') ? 'hidden' : '';
+            });
+            [navOverlayEl, ...stickyLinks.querySelectorAll('a')].forEach(el => {
+                el.addEventListener('click', () => {
+                    stickyToggle.classList.remove('active');
+                    stickyLinks.classList.remove('active');
+                    navOverlayEl.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+
+        // Threshold: 35% of viewport height (~300px on desktop), recalculates on resize
+        let isVisible = false;
+        let threshold = Math.round(window.innerHeight * 0.35);
+        window.addEventListener('resize', () => {
+            threshold = Math.round(window.innerHeight * 0.35);
+        }, { passive: true });
+
+        const onScroll = () => {
+            const past  = window.scrollY > threshold;
+            const atTop = window.scrollY < 50;
+
+            if (past && !isVisible) {
+                sticky.classList.add('visible');
+                isVisible = true;
+            } else if (atTop && isVisible) {
+                sticky.classList.remove('visible');
+                isVisible = false;
+            }
+        };
+
         window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll(); // correct state immediately on page load
+        onScroll();
     }
 
 

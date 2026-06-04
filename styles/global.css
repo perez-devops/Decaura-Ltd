@@ -311,13 +311,13 @@ h1, h2, h3, h4 {
     cursor: pointer;
 }
 .btn-bronze {
-    background: transparent;
+    background: #CDB68D;
     color: var(--pure-white);
-    border: 1px solid var(--pure-white);
+    border: 1px solid #CDB68D;
 }
 .btn-bronze:hover {
-    background: #CDB68D;
-    border-color: #CDB68D;
+    background: #ba9e6b;
+    border-color: #ba9e6b;
 }
 .btn-contact {
     background: transparent;
@@ -361,8 +361,10 @@ h1, h2, h3, h4 {
 /* ════════════════════════════════════════════════════════════
    NAVIGATION
    ════════════════════════════════════════════════════════════ */
+
+/* ── First navbar: scrolls with the page ── */
 .navbar {
-    position: fixed;
+    position: absolute;
     top: 0; left: 0; right: 0;
     z-index: 200;
     display: flex;
@@ -370,32 +372,49 @@ h1, h2, h3, h4 {
     justify-content: space-between;
     padding: 0 var(--gutter);
     height: 72px;
-    /* Transparent by default – JS adds .scrolled once user scrolls */
     background: transparent;
     border-bottom: 1px solid transparent;
-    transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* ── Scrolled state: restore white background ── */
-.navbar.scrolled {
+/* ── Sticky navbar: always fixed, revealed via transform/opacity only ── */
+.navbar--sticky {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 201;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--gutter);
+    height: 72px;
     background: var(--pure-white);
     border-bottom: 1px solid var(--shadow-grey);
     box-shadow: 0 2px 24px rgba(31,31,31,0.08);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    will-change: transform, opacity;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.navbar--sticky.visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
 }
 
-/* ── Logo: white when transparent, normal when scrolled ── */
+/* ── Logo ── */
 .nav-logo img {
     height: 34px;
     width: auto;
     filter: brightness(0) invert(1);
-    transition: filter 0.4s ease;
 }
-.navbar.scrolled .nav-logo img {
+.navbar--sticky .nav-logo img {
     filter: none;
 }
 
 .nav-toggle { display: none; }
 
+/* ── Links ── */
 .nav-links ul {
     display: flex;
     gap: 54px;
@@ -406,13 +425,12 @@ h1, h2, h3, h4 {
     font-weight: 400;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    /* White over hero, transitions to dark on scroll */
     color: rgba(255, 255, 255, 0.82);
     transition: color 0.3s ease;
     position: relative;
     padding-bottom: 4px;
 }
-.navbar.scrolled .nav-links a {
+.navbar--sticky .nav-links a {
     color: var(--warm-graphite);
 }
 .nav-links a::after {
@@ -422,15 +440,15 @@ h1, h2, h3, h4 {
     width: 0;
     height: 1px;
     background: var(--pure-white);
-    transition: width 0.3s ease, background 0.4s ease;
+    transition: width 0.3s ease;
 }
-.navbar.scrolled .nav-links a::after {
+.navbar--sticky .nav-links a::after {
     background: #CDB68D;
 }
 .nav-links a:hover,
 .nav-links a.active { color: var(--pure-white); }
-.navbar.scrolled .nav-links a:hover,
-.navbar.scrolled .nav-links a.active { color: var(--ink-black); }
+.navbar--sticky .nav-links a:hover,
+.navbar--sticky .nav-links a.active { color: var(--ink-black); }
 .nav-links a:hover::after,
 .nav-links a.active::after { width: 100%; }
 
@@ -1460,10 +1478,10 @@ h1, h2, h3, h4 {
     .nav-toggle.active .hamburger::before { transform: rotate(45deg); top: 0; }
     .nav-toggle.active .hamburger::after { transform: rotate(-45deg); bottom: 0; }
 
-    /* Hamburger turns dark once navbar has scrolled background */
-    .navbar.scrolled .hamburger,
-    .navbar.scrolled .hamburger::before,
-    .navbar.scrolled .hamburger::after { background: var(--ink-black); }
+    /* Sticky navbar hamburger is always dark (white background) */
+    .navbar--sticky .hamburger,
+    .navbar--sticky .hamburger::before,
+    .navbar--sticky .hamburger::after { background: var(--ink-black); }
 
     /* Active nav link must be dark/bronze in the white mobile menu panel */
     .nav-links ul li a.active { color: var(--brushed-bronze) !important; }
