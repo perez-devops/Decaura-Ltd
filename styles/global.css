@@ -386,7 +386,7 @@ h1, h2, h3, h4 {
     justify-content: space-between;
     padding: 0 var(--gutter);
     height: 72px;
-    background: var(--pure-white);
+    background: var(--porcelain-white);
     border-bottom: 1px solid var(--shadow-grey);
     box-shadow: 0 2px 24px rgba(31,31,31,0.08);
     transform: translateY(-100%);
@@ -1478,10 +1478,10 @@ h1, h2, h3, h4 {
     .nav-toggle.active .hamburger::before { transform: rotate(45deg); top: 0; }
     .nav-toggle.active .hamburger::after { transform: rotate(-45deg); bottom: 0; }
 
-    /* Sticky navbar hamburger is always dark (white background) */
-    .navbar--sticky .hamburger,
-    .navbar--sticky .hamburger::before,
-    .navbar--sticky .hamburger::after { background: var(--ink-black); }
+    /* Hamburger turns dark once navbar has scrolled background */
+    .navbar.scrolled .hamburger,
+    .navbar.scrolled .hamburger::before,
+    .navbar.scrolled .hamburger::after { background: var(--ink-black); }
 
     /* Active nav link must be dark/bronze in the white mobile menu panel */
     .nav-links ul li a.active { color: var(--brushed-bronze) !important; }
