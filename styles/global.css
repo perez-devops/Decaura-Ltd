@@ -1478,10 +1478,12 @@ h1, h2, h3, h4 {
     .nav-toggle.active .hamburger::before { transform: rotate(45deg); top: 0; }
     .nav-toggle.active .hamburger::after { transform: rotate(-45deg); bottom: 0; }
 
-    /* Hamburger turns dark once navbar has scrolled background */
-    .navbar.scrolled .hamburger,
-    .navbar.scrolled .hamburger::before,
-    .navbar.scrolled .hamburger::after { background: var(--ink-black); }
+    /* Sticky navbar hamburger is always dark (white background) */
+    .navbar--sticky .hamburger,
+    .navbar--sticky .hamburger::before,
+    .navbar--sticky .hamburger::after { background: var(--ink-black); }
+    /* Keep center bar transparent in X/close state */
+    .navbar--sticky .nav-toggle.active .hamburger { background: transparent; }
 
     /* Active nav link must be dark/bronze in the white mobile menu panel */
     .nav-links ul li a.active { color: var(--brushed-bronze) !important; }

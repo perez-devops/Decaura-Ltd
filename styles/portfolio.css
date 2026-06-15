@@ -2,20 +2,11 @@
    PORTFOLIO PAGE STYLES
    ════════════════════════════════════════════════════════════ */
 
-/* Force navbar to be dark over bright hero */
-.portfolio-page .navbar.scrolled {
-    background: var(--pure-white);
-    border-bottom: 1px solid var(--shadow-grey);
-}
-.portfolio-page .navbar.scrolled .nav-logo img {
-    filter: none;
-}
-.portfolio-page .navbar.scrolled .nav-links a {
-    color: var(--ink-black);
-}
-.portfolio-page .navbar.scrolled .nav-cta .btn-contact {
+/* Sticky navbar on portfolio: fill the contact button */
+.portfolio-page .navbar--sticky .nav-cta .btn-contact {
     background: #CDB68D;
     color: var(--pure-white);
+    border-color: #CDB68D;
 }
 
 /* --- Hero --- */
