@@ -183,33 +183,25 @@
 
 
 /* ════════════════════════════════════════════════════════════
-   BEFORE / AFTER
+   GALLERY SLIDER
    ════════════════════════════════════════════════════════════ */
-.pd-before-after {
-    padding: 100px 0;
+.pd-gallery-slider {
+    padding: 80px 0 0;
     background: var(--porcelain-white);
 }
-.pd-ba-heading {
-    font-family: var(--sans);
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--ink-black);
-    letter-spacing: 0.02em;
-    margin-bottom: 20px;
-}
-.pd-ba-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-bottom: 60px;
-}
-.pd-ba-grid:last-child { margin-bottom: 0; }
-.pd-ba-grid img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
+.pd-gallery-label {
     display: block;
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--warm-graphite);
+    text-align: center;
+    margin-bottom: 40px;
 }
+.pd-gallery-slider .work-track--right { animation-duration: 90s; }
+.pd-gallery-slider .work-track--left  { animation-duration: 80s; }
 
 
 /* ════════════════════════════════════════════════════════════
@@ -361,8 +353,6 @@
     }
     .pd-craft { padding: 72px 0; }
     .pd-craft-image img { height: 360px; }
-    .pd-before-after { padding: 72px 0; }
-    .pd-ba-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -375,10 +365,6 @@
 
     .pd-narrative { padding: 60px 0; }
     .pd-narrative-grid { gap: 36px; }
-
-    .pd-ba-grid { grid-template-columns: 1fr; }
-    .pd-ba-grid img { height: 220px; }
-    .pd-before-after { padding: 60px 0; }
 
     .pd-full-image { height: clamp(220px, 45vw, 400px); }
 
@@ -399,6 +385,5 @@
     .pd-narrative { padding: 48px 0; }
     .pd-craft { padding: 48px 0; }
     .pd-craft-image img { height: 240px; }
-    .pd-before-after { padding: 48px 0; }
     .pd-craft-body { margin-bottom: 32px; }
 }
