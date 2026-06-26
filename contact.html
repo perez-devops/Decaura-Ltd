@@ -29,14 +29,16 @@
     <div class="nav-overlay"></div>
     <nav class="navbar">
       <div class="nav-logo">
-        <img
-          src="./images/company-logos/Decaura logo A.png"
-          alt="Decaura"
-          decoding="async"
-          width="180"
-          height="40"
-          fetchpriority="high"
-        />
+        <a href="./index.html">
+          <img
+            src="./images/company-logos/Decaura logo A.png"
+            alt="Decaura"
+            decoding="async"
+            width="180"
+            height="40"
+            fetchpriority="high"
+          />
+        </a>
       </div>
       <button class="nav-toggle" aria-label="Toggle navigation">
         <span class="hamburger"></span>
@@ -472,10 +474,26 @@
           <div class="ff-col">
             <h4>Selected Work</h4>
             <ul>
-              <li><a href="./project-detail.html?id=alchemy-banana-island">Alchemy Home Design</a></li>
-              <li><a href="./project-detail.html?id=contemporary-ibeju-lekki">Contemporary Home, Ibeju Lekki</a></li>
-              <li><a href="./project-detail.html?id=italian-victoria-island">Italian Home Design, V.I.</a></li>
-              <li><a href="./project-detail.html?id=reflex-angelo-ikoyi">Reflex Angelo, Ikoyi</a></li>
+              <li>
+                <a href="./project-detail.html?id=alchemy-banana-island"
+                  >Alchemy Home Design</a
+                >
+              </li>
+              <li>
+                <a href="./project-detail.html?id=contemporary-ibeju-lekki"
+                  >Contemporary Home, Ibeju Lekki</a
+                >
+              </li>
+              <li>
+                <a href="./project-detail.html?id=italian-victoria-island"
+                  >Italian Home Design, V.I.</a
+                >
+              </li>
+              <li>
+                <a href="./project-detail.html?id=reflex-angelo-ikoyi"
+                  >Reflex Angelo, Ikoyi</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -499,18 +517,21 @@
     <script>
       (function () {
         const serviceLabels = {
-          'interior-design':    'Interior Architecture & Design',
-          'project-management': 'Project Management',
-          'full-delivery':      'Fully Managed Design & Delivery',
-          'consultation':       'Design Consultation',
+          "interior-design": "Interior Architecture & Design",
+          "project-management": "Project Management",
+          "full-delivery": "Fully Managed Design & Delivery",
+          consultation: "Design Consultation",
         };
-        const param = new URLSearchParams(window.location.search).get('service');
+        const param = new URLSearchParams(window.location.search).get(
+          "service",
+        );
         if (!param || !serviceLabels[param]) return;
         const label = serviceLabels[param];
-        const vision = document.getElementById('vision');
+        const vision = document.getElementById("vision");
         if (vision) vision.value = `I’d like to enquire about: ${label}.`;
-        const formSection = document.getElementById('contact-form');
-        if (formSection) formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const formSection = document.getElementById("contact-form");
+        if (formSection)
+          formSection.scrollIntoView({ behavior: "smooth", block: "start" });
       })();
     </script>
     <a

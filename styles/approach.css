@@ -10,7 +10,7 @@
     position: relative;
     height: 85vh;
     min-height: 650px;
-    background: url('../images/approach-hero-bg.png') center/cover no-repeat;
+    background: url('../images/approach-hero-image.webp') center/cover no-repeat;
     display: flex;
     align-items: center;
     color: var(--pure-white);
@@ -20,7 +20,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.2) 60%, transparent);
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5) 100%, transparent);
     z-index: 1;
 }
 .approach-hero .container {
@@ -277,7 +277,7 @@
    ════════════════════════════════════════════════════════════ */
 .process-section {
     background: var(--porcelain-white);
-    padding: 120px 0;
+    padding: 90px 0;
     overflow: hidden;
 }
 
@@ -324,7 +324,7 @@
 .process-timeline {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 30px;
+    gap: 35px;
     position: relative;
     margin-top: 60px;
 }
@@ -352,7 +352,7 @@
     height: 64px !important;
     min-width: 64px !important;
     min-height: 64px !important;
-    background-color: #C4A265 !important;
+    background-color: rgb(209, 182, 141) !important;
     border-radius: 50% !important;
     margin: 0 auto 28px !important;
     display: flex !important;
