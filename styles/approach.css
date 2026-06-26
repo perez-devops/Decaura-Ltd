@@ -347,28 +347,32 @@
     text-align: center;
 }
 
-.process-marker {
+.process-section .process-timeline .process-marker {
     width: 50px;
     height: 50px;
-    background: #D1B68D; /* Bronze circle */
+    min-width: 50px;
+    min-height: 50px;
+    background-color: #D1B68D;
     border-radius: 50%;
     margin: 0 auto 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.process-item:hover .process-marker {
+.process-section .process-timeline .process-item:hover .process-marker {
     transform: scale(1.1);
-    background: #CDB68D;
+    background-color: #CDB68D;
 }
 
-.step-number {
+.process-section .process-timeline .step-number {
     font-family: var(--serif);
     font-size: 16px;
     font-weight: 500;
-    color: var(--pure-white);
+    color: #ffffff;
+    line-height: 1;
+    display: block;
 }
 
 .process-info h3 {
