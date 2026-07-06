@@ -724,7 +724,7 @@ h1, h2, h3, h4 {
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--pure-white);
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s ease;
 }
 .work-slide:hover .slide-label { opacity: 1; }
