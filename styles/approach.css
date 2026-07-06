@@ -54,7 +54,7 @@
 ══════════════════════════════ */
 .services-section {
     background: var(--porcelain-white); /* Slightly warmer off-white as in image */
-    padding: 100px 0;
+    padding: 70px 0;
 }
 .services-section .section-header {
     margin-bottom: 72px;
@@ -277,7 +277,7 @@
    ════════════════════════════════════════════════════════════ */
 .process-section {
     background: var(--porcelain-white);
-    padding: 90px 0;
+    padding: 40px 0;
     overflow: hidden;
 }
 
@@ -397,7 +397,7 @@
    QUOTE SECTION
    ════════════════════════════════════════════════════════════ */
 .quote-section {
-    padding: 160px 0;
+    padding: 120px 0;
     text-align: center;
 }
 

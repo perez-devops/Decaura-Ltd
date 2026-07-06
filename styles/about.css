@@ -100,7 +100,7 @@
    ════════════════════════════════════════════════════════════ */
 .who-section {
     background: var(--porcelain-white);
-    padding: 96px 0;
+    padding: 96px 0px 40px 0px;
 }
 .who-layout {
     display: grid;
@@ -138,7 +138,7 @@
    MEET OUR FOUNDER
    ════════════════════════════════════════════════════════════ */
 .founder-section {
-    padding: 96px 0;
+    padding: 40px 0;
 }
 .founder-layout {
     display: grid;
@@ -182,7 +182,7 @@
    ════════════════════════════════════════════════════════════ */
 .philosophy-section {
     background: var(--porcelain-white);
-    padding: 120px 0px 0px 0px;
+    padding: 40px 0px;
     text-align: center;
 }
 .philosophy-heading {
@@ -233,7 +233,7 @@
    ════════════════════════════════════════════════════════════ */
 .foundation-section {
     background: none;
-    padding: 120px 0;
+    padding: 40px 0px 80px 0px;
 }
 
 /* Opening paragraphs */
