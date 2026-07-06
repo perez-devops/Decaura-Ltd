@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    padding: 130px 0px 20px 0px;
 }
 
 .contact-hero .hero-overlay {
@@ -32,6 +33,7 @@
 
 .contact-hero-content {
     max-width: 750px;
+    padding-top: 50px;
 }
 
 .contact-hero-content h1 {
@@ -415,7 +417,7 @@
 
 /* ── FAQ SECTION ────────────────────────────────────────────── */
 .faq-section {
-    padding: 140px 0;
+    padding: 50px 0px;
     background: var(--porcelain-white);
 }
 
