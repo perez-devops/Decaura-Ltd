@@ -33,7 +33,7 @@
    ════════════════════════════════════════════════════════════ */
 .about-hero {
     position: relative;
-    height: 72vh;
+    height: 85vh;
     min-height: 520px;
     overflow: hidden;
     display: flex;

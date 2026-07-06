@@ -27,9 +27,9 @@
     position: relative;
     z-index: 2;
 }
-.approach-content {
+/* .approach-content {
     max-width: 800px;
-}
+} */
 .approach-content h1 {
     font-family: var(--serif);
     font-size: clamp(36px, 5.5vw, 72px);
@@ -40,12 +40,11 @@
 }
 .approach-content p {
     font-family: var(--sans);
-    font-size: clamp(15px, 2.2vw, 22px);
+    font-size: clamp(14px, 2.2vw, 22px);
     font-weight: 300;
     line-height: 1.7;
     margin-bottom: 42px;
     opacity: 0.9;
-    max-width: 600px;
 }
 
 

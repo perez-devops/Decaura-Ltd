@@ -60,12 +60,11 @@
 
 .portfolio-content p {
     font-family: var(--sans);
-    font-size: clamp(14px, 1.1vw, 17px);
+    font-size: clamp(14px, 2.2vw, 22px);
     font-weight: 300;
     line-height: 1.7;
     margin-bottom: 42px;
     opacity: 0.9;
-    max-width: 480px;
 }
 
 .btn-bronze {

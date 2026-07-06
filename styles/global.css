@@ -932,7 +932,7 @@ h1, h2, h3, h4 {
     z-index: 2;
 }
 .approach-content {
-    max-width: 700px;
+    max-width: 750px;
 }
 .approach-content h1 {
     font-family: var(--serif);
