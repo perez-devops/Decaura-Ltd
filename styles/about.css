@@ -56,9 +56,9 @@
     z-index: 1;
     background: linear-gradient(
         105deg,
-        rgba(8, 6, 3, 0.72) 0%,
-        rgba(8, 6, 3, 0.42) 55%,
-        rgba(8, 6, 3, 0.15) 100%
+        rgba(0, 0, 0, 0.72) 0%,
+        rgba(0, 0, 0, 0.45) 55%,
+        rgba(0, 0, 0, 0.22) 100%
     );
 }
 .about-hero-content {

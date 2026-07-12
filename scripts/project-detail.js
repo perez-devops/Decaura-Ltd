@@ -5,311 +5,380 @@
 
 const PROJECTS = {
 
-    'alchemy-banana-island': {
-        title:        'Alchemy Home Design',
+    'warm-memories-interior': {
+        title:        'Warm Memories Interior',
         category:     'RESIDENTIAL',
-        location:     'Banana Island, Lagos',
-        locationYear: 'BANANA ISLAND, LAGOS — 2023',
-        size:         '520 SQM',
-        completion:   '15 Months',
+        location:     'Lagos',
+        locationYear: 'LAGOS — 2025',
+        size:         '260 SQM',
+        completion:   '8 Months',
         status:       'Completed',
-        heroImage:    './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_SECTIONAL_01_kfoqk2.webp',
+        heroImage:    './images/Portfolio Images/Warm Memories Interior/warm-memories_1_L.webp',
         brief: {
-            quote:  '"We wanted a living environment that felt curated yet livable — where every piece tells a story of artisan excellence and considered restraint."',
-            client: 'Private Client, Banana Island'
+            quote:  '"A home layered with memory and material — warm, tactile and intimately tailored for family life."',
+            client: 'Private Client'
         },
         solution: [
-            'The Alchemy Home project on Banana Island was conceived as an exercise in bespoke Italian craftsmanship applied to a Lagos residence. The client sought a home that balanced bold sculptural forms with an understated warmth that only hand-selected materials can deliver.',
-            'Decaura curated a complete furniture programme centred on the Alchemy collection — pairing statement sectional sofas and lounge seating with precision-crafted occasional pieces. Each element was selected for its ability to anchor space without overwhelming it.',
-            'The result is a home where materiality speaks quietly but with absolute conviction — a space that rewards the observer who takes the time to truly inhabit it.'
+            'Warm palettes and tactile textiles form the backbone of this residential brief — designed to feel familiar and enduring.',
+            'Spatial planning prioritised family circulation with quietly elegant storage solutions and soft transitions between public and private rooms.',
+            'The interiors were completed with custom joinery and layered lighting to encourage relaxed evenings and everyday comfort.'
         ],
-        fullImage:    './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_FIXED_SOFA_01_xkid8q.webp',
+        fullImage:    './images/Portfolio Images/Warm Memories Interior/warm-memories_9_L.webp',
         sliderImages: [
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_SECTIONAL_01_kfoqk2.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_SECTIONAL_j26npy.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_FIXED_SOFA_01_xkid8q.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_FIXED_SOFA_ozxswr.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_MASAMI_CHAISE_LONGUE_vb1nrc.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_ARM_CHAIR_rd6k8o.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_OSAKA_CHAIR_01_qecpza.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_OSAKA_CHAIR_ttwxdk.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_SIDE_CHAIR_caciml.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_BUFFET_kjoi3j.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_CONSOLE_ekbyod.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_BAR_UNIT_avrvyc.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_BASE_ONLY_FOR_PLASMA_TV_o5e5a1.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_OVAL_COCKTAIL_TABLE_01_crap2e.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_OVAL_COCKTAIL_TABLE_jhuuuz.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_SQUARE_COCKTAIL_TABLE_01_vyhvrn.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_SQUARE_COCKTAIL_TABLE_fny0p8.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_RECTANGULAR_COCKTAIL_TABLE_vyddj2.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_BOAT_SHAPE_OVAL_TABLE_tfeoyg.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_ROUND_TABLE_01_slyeoc.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_ROUND_TABLE_z8iyjb.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_SQUARE_END_TABLE_x2x1b9.webp',
-            './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_TABLE_nt8q8o.webp'
+            './images/Portfolio Images/Warm Memories Interior/warm-memories_10_L.webp',
+            './images/Portfolio Images/Warm Memories Interior/warm-memories_11_L.webp',
+            './images/Portfolio Images/Warm Memories Interior/warm-memories_12_L.webp',
+            './images/Portfolio Images/Warm Memories Interior/warm-memories_13_L.webp',
+            './images/Portfolio Images/Warm Memories Interior/warm-memories_1_L.webp',
+            './images/Portfolio Images/Warm Memories Interior/warm-memories_2_L.webp',
+            './images/Portfolio Images/Warm Memories Interior/warm-memories_3_L.webp',
+            './images/Portfolio Images/Warm Memories Interior/warm-memories_4_L.webp',
+            './images/Portfolio Images/Warm Memories Interior/warm-memories_5_L.webp',
+            './images/Portfolio Images/Warm Memories Interior/warm-memories_6_L.webp',
+            './images/Portfolio Images/Warm Memories Interior/warm-memories_8_L.webp',
+            './images/Portfolio Images/Warm Memories Interior/warm-memories_9_L.webp'
         ],
-        craftHeading: 'Alchemy in every form.',
-        craftBody:    'The Alchemy collection embodies the principle that furniture is architecture at a human scale. Each piece is resolved from within — the joins, the proportions, the weight — creating objects that inhabit space with quiet authority and lasting presence.',
-        craftImage:   './images/Portfolio Images/Alchemy Home Design Banana Island/ALCHEMY_CONSOLE_ekbyod.webp',
+        craftHeading: 'A home shaped by tactility.',
+        craftBody:    'Materials were chosen for their ability to age gracefully — plaster, soft linens and warm timber combine to form an interior that welcomes and endures.',
+        craftImage:   './images/Portfolio Images/Warm Memories Interior/warm-memories_3_L.webp',
         materials: [
-            { label: 'Upholstery', value: 'Premium Italian Leather' },
-            { label: 'Frame',      value: 'Lacquered Solid Oak' },
-            { label: 'Accents',    value: 'Hand-Brushed Bronze' }
+            { label: 'Walls',    value: 'Limewash & Hand-Finished Plaster' },
+            { label: 'Upholstery', value: 'Natural Linen & Velvet' },
+            { label: 'Joinery',  value: 'Custom Warm Oak' }
         ],
-        nextProject: 'contemporary-ibeju-lekki',
-        nextTitle:   'Contemporary Home, Ibeju Lekki'
+        nextProject: 'tuscan-luxe-lekki-phase-1',
+        nextTitle:   'Tuscan Luxe, Lekki'
     },
 
-    'contemporary-ibeju-lekki': {
-        title:        'Contemporary Home, Ibeju Lekki',
+    'tuscan-luxe-lekki-phase-1': {
+        title:        'Tuscan Luxe — Lekki Phase 1',
         category:     'RESIDENTIAL',
-        location:     'Ibeju Lekki, Lagos',
-        locationYear: 'IBEJU LEKKI, LAGOS — 2024',
-        size:         '480 SQM',
-        completion:   '14 Months',
+        location:     'Lekki, Lagos',
+        locationYear: 'LEKKI — 2026',
+        size:         '340 SQM',
+        completion:   '10 Months',
         status:       'Completed',
-        heroImage:    './images/Portfolio Images/Contemporary Home Ibeju Lekki/living_amenajare1_e8aobg.webp',
+        heroImage:    './images/Portfolio Images/Tuscan Luxe - Lekki Phase 1/ChatGPT Image Jul 11, 2026, 03_26_49 PM.png',
         brief: {
-            quote:  '"A home that is warm, light-filled, and effortlessly contemporary — one that grows with the family and improves with time."',
-            client: 'Private Client, Ibeju Lekki'
+            quote:  '"A warm, textured interior that borrows from Tuscan tradition while responding to Lagos climate and life."',
+            client: 'Private Client'
         },
         solution: [
-            'The brief for this Ibeju Lekki residence was rooted in family living: spaces that are generous without feeling oversized, refined without being precious. Decaura approached the project through a lens of considered domesticity.',
-            'The living areas were designed around a neutral material palette — limewash walls, warm timber joinery, and natural stone flooring — allowing the furniture and textiles to provide warmth and personality without visual noise.',
-            'Bedrooms were conceived as restful retreats: soft materiality, layered lighting, and bespoke storage solutions that disappear into the architecture. Every space feels complete and resolved.'
+            'The concept reinterprets Tuscan materials — terracotta, rough-hewn timber and soft plaster — into a modern domestic language.',
+            'Spaces were oriented to catch prevailing breezes and sheltered outdoor rooms were integrated as living extensions.',
+            'Custom timberwork and carefully selected artisan details were used throughout to give each room a unique character.'
         ],
-        fullImage:    './images/Portfolio Images/Contemporary Home Ibeju Lekki/design_interior_casa_moderna1_q4xmj3.webp',
+        fullImage:    './images/Portfolio Images/Tuscan Luxe - Lekki Phase 1/ChatGPT Image Jul 12, 2026, 11_24_51 AM.png',
         sliderImages: [
-            './images/Portfolio Images/Contemporary Home Ibeju Lekki/living_amenajare1_e8aobg.webp',
-            './images/Portfolio Images/Contemporary Home Ibeju Lekki/living_amenajare2_xgqwu8.webp',
-            './images/Portfolio Images/Contemporary Home Ibeju Lekki/living_design1_vywym1.webp',
-            './images/Portfolio Images/Contemporary Home Ibeju Lekki/design_interior_casa_moderna1_q4xmj3.webp',
-            './images/Portfolio Images/Contemporary Home Ibeju Lekki/design_interior_casa_moderna2_m8bjbl.webp',
-            './images/Portfolio Images/Contemporary Home Ibeju Lekki/dormitor_amenajare1_ukypl9.webp',
-            './images/Portfolio Images/Contemporary Home Ibeju Lekki/dormitor_amenajare2_a3q8rg.webp',
-            './images/Portfolio Images/Contemporary Home Ibeju Lekki/dormitor_design1_qvosou.webp',
-            './images/Portfolio Images/Contemporary Home Ibeju Lekki/dormitor_design3_kw7yyc.webp',
-            './images/Portfolio Images/Contemporary Home Ibeju Lekki/dressing_amenajare2_y22fw5.webp',
-            './images/Portfolio Images/Contemporary Home Ibeju Lekki/baie_amenajare2_emxt5m.webp',
-            './images/Portfolio Images/Contemporary Home Ibeju Lekki/baie_design2_wowkg7.webp',
-            './images/Portfolio Images/Contemporary Home Ibeju Lekki/baie_design4_hp6wfw.webp',
-            './images/Portfolio Images/Contemporary Home Ibeju Lekki/baie_design5_xxh8ek.webp',
-            './images/Portfolio Images/Contemporary Home Ibeju Lekki/bucatarie_amenajare_mdrtnm.webp',
-            './images/Portfolio Images/Contemporary Home Ibeju Lekki/bucatarie_design_x7jkpu.webp',
-            './images/Portfolio Images/Contemporary Home Ibeju Lekki/hol_design_expbso.webp'
+            './images/Portfolio Images/Tuscan Luxe - Lekki Phase 1/ChatGPT Image Jul 11, 2026, 03_17_00 PM.png',
+            './images/Portfolio Images/Tuscan Luxe - Lekki Phase 1/ChatGPT Image Jul 11, 2026, 03_17_21 PM.png',
+            './images/Portfolio Images/Tuscan Luxe - Lekki Phase 1/ChatGPT Image Jul 11, 2026, 03_22_26 PM.png',
+            './images/Portfolio Images/Tuscan Luxe - Lekki Phase 1/ChatGPT Image Jul 11, 2026, 03_26_49 PM.png',
+            './images/Portfolio Images/Tuscan Luxe - Lekki Phase 1/ChatGPT Image Jul 12, 2026, 10_20_48 AM.png',
+            './images/Portfolio Images/Tuscan Luxe - Lekki Phase 1/ChatGPT Image Jul 12, 2026, 10_28_59 AM.png',
+            './images/Portfolio Images/Tuscan Luxe - Lekki Phase 1/ChatGPT Image Jul 12, 2026, 10_29_05 AM.png',
+            './images/Portfolio Images/Tuscan Luxe - Lekki Phase 1/ChatGPT Image Jul 12, 2026, 10_39_53 AM.png',
+            './images/Portfolio Images/Tuscan Luxe - Lekki Phase 1/ChatGPT Image Jul 12, 2026, 10_40_00 AM.png',
+            './images/Portfolio Images/Tuscan Luxe - Lekki Phase 1/ChatGPT Image Jul 12, 2026, 11_24_37 AM.png',
+            './images/Portfolio Images/Tuscan Luxe - Lekki Phase 1/ChatGPT Image Jul 12, 2026, 11_24_42 AM.png',
+            './images/Portfolio Images/Tuscan Luxe - Lekki Phase 1/ChatGPT Image Jul 12, 2026, 11_24_46 AM.png',
+            './images/Portfolio Images/Tuscan Luxe - Lekki Phase 1/ChatGPT Image Jul 12, 2026, 11_24_51 AM.png'
         ],
-        craftHeading: 'A home resolved in every room.',
-        craftBody:    'From the master bedroom\'s hand-finished joinery to the kitchen\'s integrated material palette, the Ibeju Lekki home demonstrates that rigour at the detail level is what separates well-designed spaces from truly considered ones.',
-        craftImage:   './images/Portfolio Images/Contemporary Home Ibeju Lekki/dormitor_amenajare2_a3q8rg.webp',
+        craftHeading: 'Rustic refinement.',
+        craftBody:    'A restrained material palette and artisan finishes create depth and warmth while keeping the architecture visually light.',
+        craftImage:   './images/Portfolio Images/Tuscan Luxe - Lekki Phase 1/ChatGPT Image Jul 12, 2026, 10_40_00 AM.png',
         materials: [
-            { label: 'Walls',    value: 'Limewash Plaster Finish' },
-            { label: 'Flooring', value: 'Natural Stone & Warm Oak' },
-            { label: 'Joinery',  value: 'Custom Lacquered Timber' }
+            { label: 'Surfaces', value: 'Tumbled Stone & Burnt Terracotta' },
+            { label: 'Joinery',  value: 'Aged Oak & Hand-Finished Timber' },
+            { label: 'Accents',  value: 'Antique Brass' }
         ],
-        nextProject: 'contemporary-ikorodu',
-        nextTitle:   'Contemporary Style Living, Ikorodu'
+        nextProject: 'emirati-luxury-ajah-lagos',
+        nextTitle:   'Emirati Luxury, Ajah'
     },
 
-    'contemporary-ikorodu': {
-        title:        'Contemporary Style Living, Ikorodu',
+    'emirati-luxury-ajah-lagos': {
+        title:        'Emirati Luxury — Ajah, Lagos',
         category:     'RESIDENTIAL',
-        location:     'Ikorodu, Lagos',
-        locationYear: 'IKORODU, LAGOS — 2024',
-        size:         '360 SQM',
-        completion:   '11 Months',
+        location:     'Ajah, Lagos',
+        locationYear: 'AJAH — 2026',
+        size:         '720 SQM',
+        completion:   '20 Months',
         status:       'Completed',
-        heroImage:    './images/Portfolio Images/Contemporary Style Living Ikorodu/living-modern-colectia-Icon-Francesco_knpw32.webp',
+        heroImage:    './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 1.png',
         brief: {
-            quote:  '"We wanted a home that felt elevated but approachable — sophisticated in its simplicity, welcoming in its atmosphere."',
-            client: 'Private Client, Ikorodu'
+            quote:  '"An interior language of generous scale, rich materials and a calm, jewel-like colour story."',
+            client: 'Private Client'
         },
         solution: [
-            'The Ikorodu brief presented a clear design mandate: bring contemporary European living sensibility to a mid-scale family home in Lagos. Decaura drew on the Francesco Icon Collection to anchor the main living spaces with a cohesive material story.',
-            'The open-plan living, dining, and bar areas were conceived as a continuous flow of space — each zone defined by a shift in material or lighting register rather than physical partition. The result is a home that feels expansive despite its measured footprint.',
-            'Furniture and display pieces were curated to serve the architecture: each item positioned to define space, frame a view, or invite conversation. Nothing here is incidental.'
+            'The project draws on Gulf-inspired forms and materials while being carefully adapted to local context and climate.',
+            'Large reception spaces are balanced with intimate seating arrangements and high-quality bespoke joinery.',
+            'Lighting and landscape were designed in parallel to ensure a cohesive transition between indoor and outdoor life.'
         ],
-        fullImage:    './images/Portfolio Images/Contemporary Style Living Ikorodu/colectia-Icon-living-contemporan-Francesco_xotqhy.webp',
+        fullImage:    './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 9.png',
         sliderImages: [
-            './images/Portfolio Images/Contemporary Style Living Ikorodu/living-modern-colectia-Icon-Francesco_knpw32.webp',
-            './images/Portfolio Images/Contemporary Style Living Ikorodu/colectia-Icon-living-contemporan-Francesco_xotqhy.webp',
-            './images/Portfolio Images/Contemporary Style Living Ikorodu/living-bar-colectia-Icon-Francesco_oe3ohi.webp',
-            './images/Portfolio Images/Contemporary Style Living Ikorodu/masa-dining-colectia-Icon-Francesco_uq332b.webp',
-            './images/Portfolio Images/Contemporary Style Living Ikorodu/mobilier-contemporan-colectia-Icon-Francesco_lzzdzw.webp',
-            './images/Portfolio Images/Contemporary Style Living Ikorodu/vitrina-living-colectia-Icon-Francesco_xdg2hh.webp'
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 1.png',
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 10.png',
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 11.png',
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 12.png',
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 13.png',
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 14.png',
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 15.png',
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 16.png',
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 17.png',
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 18.png',
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 19.jpg',
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 2.png',
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 20.jpg',
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 3.png',
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 4.png',
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 5.png',
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 6.png',
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 7.png',
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 8.png',
+            './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 9.png'
         ],
-        craftHeading: 'Contemporary living, precisely curated.',
-        craftBody:    'The Francesco Icon Collection was selected for its ability to anchor a room without dominating it. Each piece holds its own weight architecturally, while the ensemble reads as a single considered statement of how contemporary Lagos lives.',
-        craftImage:   './images/Portfolio Images/Contemporary Style Living Ikorodu/masa-dining-colectia-Icon-Francesco_uq332b.webp',
+        craftHeading: 'Grand gestures, considered details.',
+        craftBody:    'An emphasis on proportion, luxurious textiles and refined detailing ensures the home reads as both modern and timeless.',
+        craftImage:   './images/Portfolio Images/Emirati Luxury - Ajah Lagos/dubai_villa 6.png',
         materials: [
-            { label: 'Upholstery', value: 'Premium Fabric & Leather' },
-            { label: 'Structure',  value: 'Lacquered & Brushed Steel' },
-            { label: 'Surfaces',   value: 'Marble & Solid Timber Tops' }
+            { label: 'Surfaces', value: 'Polished Stone & Gilded Accents' },
+            { label: 'Upholstery', value: 'Silk & Velvet' },
+            { label: 'Structure', value: 'High-Grade Timber & Steel' }
         ],
-        nextProject: 'italian-victoria-island',
-        nextTitle:   'Italian Home Design, Victoria Island'
+        nextProject: 'citizen-of-the-world-design',
+        nextTitle:   'Citizen of the World Design'
     },
 
-    'italian-victoria-island': {
-        title:        'Italian Home Design, Victoria Island',
+    'citizen-of-the-world-design': {
+        title:        'Citizen of the World',
         category:     'RESIDENTIAL',
-        location:     'Victoria Island, Lagos',
-        locationYear: 'VICTORIA ISLAND, LAGOS — 2023',
-        size:         '610 SQM',
-        completion:   '18 Months',
+        location:     'Lagos',
+        locationYear: 'LAGOS — 2025',
+        size:         '300 SQM',
+        completion:   '9 Months',
         status:       'Completed',
-        heroImage:    './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_LIVING_ROOM_BAR_1_tj0o4e.webp',
+        heroImage:    './images/Portfolio Images/Citizen of the World Design/Citizen-of-the-world-1.webp',
         brief: {
-            quote:  '"We wanted an interior that reflected our appreciation of Italian design culture — not as imitation, but as a deeply felt philosophy of living well."',
-            client: 'Private Client, Victoria Island'
+            quote:  '"A layered interior language that borrows freely from global references while remaining local in its materiality."',
+            client: 'Private Client'
         },
         solution: [
-            'The Victoria Island brief was unambiguous in its ambition: a home informed by the finest traditions of Italian interior design, executed with material precision and curatorial restraint. Decaura partnered with a select portfolio of Italian makers to realise this vision.',
-            'The Charisma collection anchors the primary living spaces — its refined proportions and rich upholstery choices lending warmth to the generous volumes of the main reception rooms. Custom joinery and display units were designed to complement rather than compete.',
-            'The bar and entertaining areas were treated as destinations within the home — spaces designed to impress through intimacy rather than scale, where every surface invites touch and every light source flatters the occupant.'
+            'We curated a collection of pieces and materials from multiple influences and arranged them to feel cohesive and contemporary.',
+            'Neutral backgrounds allow a set of carefully chosen objects and artworks to provide colour and pattern.',
+            'The result is a home that feels travelled but grounded — familiar and curated in equal measure.'
         ],
-        fullImage:    './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_FIXED_SOFA_01_1_bprxdo.webp',
+        fullImage:    './images/Portfolio Images/Citizen of the World Design/Citizen-of-the-world-9.webp',
         sliderImages: [
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_LIVING_ROOM_BAR_1_tj0o4e.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_SECTIONAL_01_ksuqee.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_FIXED_SOFA_01_1_bprxdo.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_FIXED_SOFA_01_iflwcz.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_FIXED_SOFA_02_ihpdku.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_FIXED_SOFA_j1aspg.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_ARMCHAIR_x6xhsu.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_ARM_CHAIR_ldev4j.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_OCCASIONAL_SWIVEL_CHAIR_odt5pv.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_OTTOMAN_FOR_OCCASIONAL_CHAIR_kb0gsg.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_OTTOMAN_ofmqvz.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_SIDE_CHAIR_v7goss.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_BAR_STOOL_bncyrg.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_BAR_CABINET_ye0fpc.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_BUFFET__01_sjpgt2.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_BUFFET_kj7ggy.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_BIFACIAL_SHOWCASE_d6jcgk.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_VETRINE_yfgwjk.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_CONSOLE_jvzzcx.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_COCKTAIL_TABLE_01_d3wqqh.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_COCKTAIL_TABLE_nrcb91.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_SQUARE_COCKTAIL_TABLE_m2dvvn.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_SQUARE_END_TABLE_bjupyb.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_ROUND_END_TABLE_nfj9w5.webp',
-            './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_ROUND_TABLE_gkmi1d.webp'
+            './images/Portfolio Images/Citizen of the World Design/Citizen-of-the-world-1.webp',
+            './images/Portfolio Images/Citizen of the World Design/Citizen-of-the-world-10.webp',
+            './images/Portfolio Images/Citizen of the World Design/Citizen-of-the-world-2.webp',
+            './images/Portfolio Images/Citizen of the World Design/Citizen-of-the-world-3.webp',
+            './images/Portfolio Images/Citizen of the World Design/Citizen-of-the-world-5.webp',
+            './images/Portfolio Images/Citizen of the World Design/Citizen-of-the-world-6.webp',
+            './images/Portfolio Images/Citizen of the World Design/Citizen-of-the-world-7.webp',
+            './images/Portfolio Images/Citizen of the World Design/Citizen-of-the-world-8.webp',
+            './images/Portfolio Images/Citizen of the World Design/Citizen-of-the-world-9.webp'
         ],
-        craftHeading: 'Italian precision. Lagos refinement.',
-        craftBody:    'The Charisma collection embodies over a century of Italian furniture-making knowledge — deep-buttoned upholstery, hand-gilded frames, and precision-mitered cabinetry. Decaura brought this level of craft to Victoria Island, ensuring every piece was installed exactly as the makers intended.',
-        craftImage:   './images/Portfolio Images/Italian Home Design Victoria Island/CHARISMA_ARMCHAIR_x6xhsu.webp',
+        craftHeading: 'A global domesticity.',
+        craftBody:    'We aimed for interiors that feel collected rather than curated — a backdrop that lets objects and experiences take center stage.',
+        craftImage:   './images/Portfolio Images/Citizen of the World Design/Citizen-of-the-world-6.webp',
         materials: [
-            { label: 'Upholstery', value: 'Hand-Tufted Italian Fabric' },
-            { label: 'Frames',     value: 'Lacquered & Gold-Leaf Finish' },
-            { label: 'Surfaces',   value: 'Polished Marble & Brass' }
+            { label: 'Upholstery', value: 'Mixed Natural Textiles' },
+            { label: 'Surfaces',   value: 'Stone & Oak' },
+            { label: 'Accents',    value: 'Hand-Finished Metalwork' }
         ],
-        nextProject: 'modern-mirage-ota',
-        nextTitle:   'Modern Mirage, Ota'
+        nextProject: 'lake-side-view-design',
+        nextTitle:   'Lake Side View Design'
     },
 
-    'modern-mirage-ota': {
-        title:        'Modern Mirage, Ota',
+    'lake-side-view-design': {
+        title:        'Lake Side View',
         category:     'RESIDENTIAL',
-        location:     'Ota, Ogun State',
-        locationYear: 'OTA, OGUN STATE — 2024',
-        size:         '390 SQM',
+        location:     'Lagos',
+        locationYear: 'LAGOS — 2025',
+        size:         '420 SQM',
         completion:   '12 Months',
         status:       'Completed',
-        heroImage:    './images/Portfolio Images/Modern Mirage Ota Ogun State/living-bar-colectia-Icon-Francesco_jfj82l.webp',
+        heroImage:    './images/Portfolio Images/Lake Side View Design/close-to-the-lake_14-L.webp',
         brief: {
-            quote:  '"A contemporary family home that feels both aspirational and deeply livable — where architecture and interior design work as one."',
-            client: 'Private Client, Ogun State'
+            quote:  '"Design that frames the view and lets the landscape become part of the interior."',
+            client: 'Private Client'
         },
         solution: [
-            'The Ota residence presented a unique design opportunity: a generous family home on the outskirts of Lagos, where design expectations were high but the brief called for a different register than the city\'s more formal residences.',
-            'Decaura selected the Mirage collection as the primary furniture programme — its fluid forms and premium materials creating a sophisticated yet relaxed interior atmosphere. Sectional seating anchors the living room, while precision display and storage units give structure to the main walls.',
-            'Throughout, the design prioritises comfort without compromising on craft — a home where children play and guests linger, but where the quality of the environment is always apparent to those who know where to look.'
+            'Large openings and careful material transitions create a seamless relationship between indoors and out.',
+            'Durable finishes were selected to withstand lakeside conditions while maintaining a refined finish.',
+            'The palette is restrained so that the ever-changing external view remains the hero.'
         ],
-        fullImage:    './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_SECTIONAL_01_dl5q5t.webp',
+        fullImage:    './images/Portfolio Images/Lake Side View Design/close-to-the-lake_27-L.webp',
         sliderImages: [
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/living-bar-colectia-Icon-Francesco_jfj82l.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_SECTIONAL_01_dl5q5t.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_SECTIONAL_kow69f.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_FIXED_SOFA_01_eyjbtu.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_FIXED_SOFA_02_fnfxjd.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_FIXED_SOFA_wf7wgf.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_ARMCHAIR_01_g7mwbn.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_ARMCHAIR_e9hmrq.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_ARM_CHAIR_olomcp.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_CHAIR_pxx1as.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_OTTOMAN_CHAIR_dhva9k.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_ROUND_OTTOMAN_x7bbcu.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_BUFFET_01_di2mcy.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_BUFFET_tsiq0u.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_TV_UNIT_df85ey.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_VETRINE_lzrahv.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_CONSOLE_or0hbu.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_COCKTAIL_SOFA_TABLE_fqcqne.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_CURVED_SOFA_TABLE_u4prfr.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_END_SOFA_TABLE_atbw6x.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_RECTANGULAR_TABLE_01_wlzxsh.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_RECTANGULAR_TABLE_02_pijgyp.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_RECTANGULAR_TABLE_snsex7.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_ROUNBG_TABLE_MARBLE_TOP_ovmqrc.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_ROUND_TABLE_r9y6dl.webp',
-            './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_SIDE_TABLE_zcu6ds.webp'
+            './images/Portfolio Images/Lake Side View Design/close-to-the-lake-1-L.webp',
+            './images/Portfolio Images/Lake Side View Design/close-to-the-lake-2-L.webp',
+            './images/Portfolio Images/Lake Side View Design/close-to-the-lake_14-L.webp',
+            './images/Portfolio Images/Lake Side View Design/close-to-the-lake_16-L.webp',
+            './images/Portfolio Images/Lake Side View Design/close-to-the-lake_17-L.webp',
+            './images/Portfolio Images/Lake Side View Design/close-to-the-lake_19-L.webp',
+            './images/Portfolio Images/Lake Side View Design/close-to-the-lake_20-L.webp',
+            './images/Portfolio Images/Lake Side View Design/close-to-the-lake_22-L.webp',
+            './images/Portfolio Images/Lake Side View Design/close-to-the-lake_23-L.webp',
+            './images/Portfolio Images/Lake Side View Design/close-to-the-lake_26.webp',
+            './images/Portfolio Images/Lake Side View Design/close-to-the-lake_27-L.webp'
         ],
-        craftHeading: 'Fluid form. Lasting presence.',
-        craftBody:    'The Mirage collection is defined by its fluid silhouettes and the tension between soft upholstery and precision-cut hard materials. Marble-topped tables, curved sofas, and architectural display units combine to create a home that feels designed — but never over-designed.',
-        craftImage:   './images/Portfolio Images/Modern Mirage Ota Ogun State/MIRAGE_ARMCHAIR_e9hmrq.webp',
+        craftHeading: 'Framing nature.',
+        craftBody:    'Design choices were informed by the surrounding landscape — minimal detailing and a neutral palette let the view remain central.',
+        craftImage:   './images/Portfolio Images/Lake Side View Design/close-to-the-lake_27-L.webp',
         materials: [
-            { label: 'Upholstery', value: 'Premium Woven Fabric' },
-            { label: 'Tables',     value: 'Marble & Lacquered Timber' },
-            { label: 'Storage',    value: 'High-Gloss Lacquer Finish' }
+            { label: 'Exterior', value: 'Engineered Timber & Stone' },
+            { label: 'Interior', value: 'Limestone & Oak' },
+            { label: 'Finishes', value: 'Weather-Resistant Coatings' }
         ],
-        nextProject: 'reflex-angelo-ikoyi',
-        nextTitle:   'Reflex Angelo, Ikoyi'
+        nextProject: 'regency-living-ota-ogun-state',
+        nextTitle:   'Regency Living, Ota'
     },
 
-    'reflex-angelo-ikoyi': {
-        title:        'Reflex Angelo, Ikoyi',
+    'regency-living-ota-ogun-state': {
+        title:        'Regency Living — Ota',
         category:     'RESIDENTIAL',
-        location:     'Ikoyi, Lagos',
-        locationYear: 'IKOYI, LAGOS — 2023',
-        size:         '680 SQM',
-        completion:   '22 Months',
+        location:     'Ota, Ogun State',
+        locationYear: 'OTA — 2025',
+        size:         '380 SQM',
+        completion:   '11 Months',
         status:       'Completed',
-        heroImage:    './images/Portfolio Images/Reflex Angelo Ikoyi/Luxury_High_End_TV_Furniture_-_Collier_jmf3x7.webp',
+        heroImage:    './images/Portfolio Images/Regency Living - Ota Ogun State/ChatGPT Image Jul 11, 2026, 05_19_17 PM.png',
         brief: {
-            quote:  '"We wanted every room to feel like a moment — individual, considered, and deeply distinguished from the ordinary."',
-            client: 'Private Client, Ikoyi'
+            quote:  '"A measured approach to classic domestic form — layered with contemporary finishes and careful proportion."',
+            client: 'Private Client'
         },
         solution: [
-            'The Reflex Angelo Ikoyi project represents Decaura\'s most discerning residential commission to date — a home where the client\'s brief called explicitly for pieces that are collectible in their own right, not simply functional.',
-            'Working with the Reflex Angelo catalogue, Decaura curated a selection of signature pieces: the Collier high-end entertainment system, bespoke glass display cabinets, and a series of luxury occasional pieces including the Lotus bench and console collection. Each item was selected for its singular identity.',
-            'The approach to each room was one of gallery thinking applied to domestic space — generous, luminous volumes punctuated by objects of extraordinary quality, where the negative space is as considered as the pieces themselves.'
+            'The design blends classical proportion with contemporary detailing to produce a home that feels both familiar and modern.',
+            'Custom joinery and integrated storage were designed to maximise usability while preserving the architecture.',
+            'Attention to scale in the primary reception spaces ensures comfortable entertaining and everyday family life.'
         ],
-        fullImage:    './images/Portfolio Images/Reflex Angelo Ikoyi/Luxury_Glass_Display_Cabinet_-_Lotu_nchi7f.webp',
+        fullImage:    './images/Portfolio Images/Regency Living - Ota Ogun State/ChatGPT Image Jul 11, 2026, 05_29_54 PM.png',
         sliderImages: [
-            './images/Portfolio Images/Reflex Angelo Ikoyi/Luxury_High_End_TV_Furniture_-_Collier_jmf3x7.webp',
-            './images/Portfolio Images/Reflex Angelo Ikoyi/Exclusive_Crystal_Top_Luxury_Soft_Velvet_Buffet_-_Signature_gtxx6f.webp',
-            './images/Portfolio Images/Reflex Angelo Ikoyi/Luxury_Glass_Display_Cabinet_-_Lotu_nchi7f.webp',
-            './images/Portfolio Images/Reflex Angelo Ikoyi/Luxury_Glossy_Gold_Console_Table_-_Lotus_g2ejnw.webp',
-            './images/Portfolio Images/Reflex Angelo Ikoyi/Contemporary_Marble_Console_-_Con-Soul_b3rm1t.webp',
-            './images/Portfolio Images/Reflex Angelo Ikoyi/High_End_Contemporary_Italian_Designer_Quilted_Suede_Fabric_Armchair_Collier_1_hwnfqo.webp',
-            './images/Portfolio Images/Reflex Angelo Ikoyi/Exclusive_Modern_Velvet_Leopard_Chair_-_Gattopardo_ct2wsh.webp',
-            './images/Portfolio Images/Reflex Angelo Ikoyi/Exclusive_Spider_Pedestal_Marble_Coffee_Table_-_Gattopardo_toeou3.webp',
-            './images/Portfolio Images/Reflex Angelo Ikoyi/Exclusive_Modern_Precious_Stone_Coffee_Tables_Set_-_Albina_achrcy.webp',
-            './images/Portfolio Images/Reflex Angelo Ikoyi/Designer_Velvet_Flower_High_Bench_-_Lotus_juw0vz.webp',
-            './images/Portfolio Images/Reflex Angelo Ikoyi/Bench_-_tuscany_zcvwoj.webp',
-            './images/Portfolio Images/Reflex Angelo Ikoyi/Luxury_Gold_Footed_Tray_-_Sahara_zanfxj.webp'
+            './images/Portfolio Images/Regency Living - Ota Ogun State/ChatGPT Image Jul 11, 2026, 02_59_52 PM.png',
+            './images/Portfolio Images/Regency Living - Ota Ogun State/ChatGPT Image Jul 11, 2026, 03_03_58 PM.png',
+            './images/Portfolio Images/Regency Living - Ota Ogun State/ChatGPT Image Jul 11, 2026, 03_06_03 PM.png',
+            './images/Portfolio Images/Regency Living - Ota Ogun State/ChatGPT Image Jul 11, 2026, 03_09_42 PM.png',
+            './images/Portfolio Images/Regency Living - Ota Ogun State/ChatGPT Image Jul 11, 2026, 03_12_28 PM.png',
+            './images/Portfolio Images/Regency Living - Ota Ogun State/ChatGPT Image Jul 11, 2026, 04_47_52 PM.png',
+            './images/Portfolio Images/Regency Living - Ota Ogun State/ChatGPT Image Jul 11, 2026, 04_47_58 PM.png',
+            './images/Portfolio Images/Regency Living - Ota Ogun State/ChatGPT Image Jul 11, 2026, 04_48_03 PM.png',
+            './images/Portfolio Images/Regency Living - Ota Ogun State/ChatGPT Image Jul 11, 2026, 04_50_13 PM.png',
+            './images/Portfolio Images/Regency Living - Ota Ogun State/ChatGPT Image Jul 11, 2026, 04_53_28 PM.png',
+            './images/Portfolio Images/Regency Living - Ota Ogun State/ChatGPT Image Jul 11, 2026, 05_11_31 PM.png',
+            './images/Portfolio Images/Regency Living - Ota Ogun State/ChatGPT Image Jul 11, 2026, 05_19_17 PM.png',
+            './images/Portfolio Images/Regency Living - Ota Ogun State/ChatGPT Image Jul 11, 2026, 05_29_54 PM 2.png',
+            './images/Portfolio Images/Regency Living - Ota Ogun State/ChatGPT Image Jul 11, 2026, 05_29_54 PM 3.png',
+            './images/Portfolio Images/Regency Living - Ota Ogun State/ChatGPT Image Jul 11, 2026, 05_29_54 PM 4.png',
+            './images/Portfolio Images/Regency Living - Ota Ogun State/ChatGPT Image Jul 11, 2026, 05_29_54 PM.png'
         ],
-        craftHeading: 'Collectible design. Lived in daily.',
-        craftBody:    'Reflex Angelo\'s philosophy aligns precisely with Decaura\'s own: that the finest furniture is designed to be extraordinary in isolation, but transcends itself entirely when placed in a considered interior context. The Ikoyi project is that philosophy at full expression.',
-        craftImage:   './images/Portfolio Images/Reflex Angelo Ikoyi/High_End_Contemporary_Italian_Designer_Quilted_Suede_Fabric_Armchair_Collier_1_hwnfqo.webp',
+        craftHeading: 'Measured, refined.',
+        craftBody:    'Refined proportions and considered detailing underpin a home designed to be both presentable and perfectly liveable.',
+        craftImage:   './images/Portfolio Images/Regency Living - Ota Ogun State/ChatGPT Image Jul 11, 2026, 05_19_17 PM.png',
         materials: [
-            { label: 'Upholstery', value: 'Quilted Suede & Velvet' },
-            { label: 'Surfaces',   value: 'Crystal, Marble & Gold Leaf' },
-            { label: 'Structure',  value: 'Precision Steel & Solid Timber' }
+            { label: 'Joinery', value: 'Painted & Stained Timber' },
+            { label: 'Flooring', value: 'Polished Stone & Oak' },
+            { label: 'Accents', value: 'Brass & Bronze' }
         ],
-        nextProject: 'alchemy-banana-island',
-        nextTitle:   'Alchemy Home Design, Banana Island'
+        nextProject: 'french-elegance-victoria-island',
+        nextTitle:   'French Elegance, V.I.'
+    },
+
+    'french-elegance-victoria-island': {
+        title:        'French Elegance — Victoria Island',
+        category:     'RESIDENTIAL',
+        location:     'Victoria Island, Lagos',
+        locationYear: 'VICTORIA ISLAND — 2024',
+        size:         '280 SQM',
+        completion:   '9 Months',
+        status:       'Completed',
+        heroImage:    './images/Portfolio Images/French Elegance - Victoria Island LAgos/ChatGPT Image Jul 11, 2026, 02_54_03 PM.png',
+        brief: {
+            quote:  '"Delicate ornament and refined proportion — a quietly luxurious domestic interior."',
+            client: 'Private Client'
+        },
+        solution: [
+            'A light, neutral base supports classical references — subtle mouldings, refined upholstery and a delicate palette.',
+            'Furniture selection focused on scale and comfort, with an attention to tactile materials and artisanal details.',
+            'The overall effect is formal without being fussy — elegant, calm and enduring.'
+        ],
+        fullImage:    './images/Portfolio Images/French Elegance - Victoria Island LAgos/ChatGPT Image Jul 11, 2026, 02_54_03 PM.png',
+        sliderImages: [
+            './images/Portfolio Images/French Elegance - Victoria Island LAgos/ChatGPT Image Jul 11, 2026, 02_45_19 PM.png',
+            './images/Portfolio Images/French Elegance - Victoria Island LAgos/ChatGPT Image Jul 11, 2026, 02_48_41 PM.png',
+            './images/Portfolio Images/French Elegance - Victoria Island LAgos/ChatGPT Image Jul 11, 2026, 02_54_03 PM.png',
+            './images/Portfolio Images/French Elegance - Victoria Island LAgos/ChatGPT Image Jul 11, 2026, 03_01_56 PM.png',
+            './images/Portfolio Images/French Elegance - Victoria Island LAgos/ChatGPT Image Jul 11, 2026, 03_11_05 PM.png'
+        ],
+        craftHeading: 'Fine proportion, soft detail.',
+        craftBody:    'The interiors are resolved through careful attention to proportion and the restrained use of ornament — an understated approach to luxury.',
+        craftImage:   './images/Portfolio Images/French Elegance - Victoria Island LAgos/ChatGPT Image Jul 11, 2026, 02_48_41 PM.png',
+        materials: [
+            { label: 'Upholstery', value: 'Hand-Tied Fabrics' },
+            { label: 'Surfaces', value: 'Polished Marble & Soft Timber' },
+            { label: 'Accents', value: 'Antique-Finish Metalwork' }
+        ],
+        nextProject: 'modern-classic-design',
+        nextTitle:   'Modern Classic Design'
+    },
+
+    'modern-classic-design': {
+        title:        'Modern Classic Design',
+        category:     'RESIDENTIAL',
+        location:     'Lagos',
+        locationYear: 'LAGOS — 2025',
+        size:         '540 SQM',
+        completion:   '15 Months',
+        status:       'Completed',
+        heroImage:    './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-44lw.jpg',
+        brief: {
+            quote:  '"A modern translation of classical proportion — familiar forms made new through material and detail."',
+            client: 'Private Client'
+        },
+        solution: [
+            'The design reinterprets classical motifs with contemporary materials and clean execution.',
+            'High-quality joinery and carefully chosen furniture pieces create a layered, luxurious domestic atmosphere.',
+            'Balance and rhythm were central to the composition — each room designed to feel both comfortable and dignified.'
+        ],
+        fullImage:    './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-44lw.jpg',
+        sliderImages: [
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-08lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-09lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-12lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-13lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-14lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-15lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-16lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-17lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-18lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-19lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-20lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-21lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-22lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-23lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-24lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-25lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-26lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-27lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-30lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-31lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-32lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-34lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-35lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-37lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-38lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-40lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-41lw.jpg',
+            './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-44lw.jpg'
+        ],
+        craftHeading: 'Classic reference, modern execution.',
+        craftBody:    'A commitment to fine proportion and detailing results in interiors that feel composed and complete — modern but with a clear lineage.',
+        craftImage:   './images/Portfolio Images/Modern Classic Design/Noble_JR-Landed-House-40lw.jpg',
+        materials: [
+            { label: 'Frames', value: 'Solid Timber & Engineered Cores' },
+            { label: 'Surfaces', value: 'Marble & Polished Timber' },
+            { label: 'Accents', value: 'Brass & Hand-Finished Iron' }
+        ]
     }
 
 };

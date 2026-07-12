@@ -36,7 +36,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.2) 60%, transparent);
+    background: linear-gradient(to right, rgba(0,0,0,0.72), rgba(0,0,0,0.42) 55%, rgba(0,0,0,0.18) 100%);
     z-index: 2;
 }
 
