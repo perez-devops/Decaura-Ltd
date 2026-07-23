@@ -198,8 +198,7 @@
     font-size: clamp(26px, 3.8vw, 48px); /* Slightly smaller to match quote scale */
     font-weight: 400;
     line-height: 1.4;
-    margin: 0 auto 56px;
-    padding: 70px 0px 0px 0px;
+    margin: 0 auto 56px; 
     display: block;
     width: 100%;
     text-align: center;

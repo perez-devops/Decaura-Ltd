@@ -47,13 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
             videos[nextIndex].preload = 'auto';
         }, 4000);
 
-        cycleTimer = setTimeout(() => setVideo(nextIndex), 7000);
+        cycleTimer = setTimeout(() => setVideo(nextIndex), 8000);
     }
 
     if (videos.length) {
         videos[0].play().catch(() => {});
         indicators[0].classList.add('active');
-        cycleTimer = setTimeout(() => setVideo(1), 7000);
+        cycleTimer = setTimeout(() => setVideo(1), 8000);
         indicators.forEach((ind, i) => ind.addEventListener('click', () => setVideo(i)));
     }
 
