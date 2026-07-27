@@ -339,6 +339,44 @@
     opacity: 0.6;
 }
 
+.file-list {
+    text-align: left;
+    padding: 16px;
+    background: rgba(76, 175, 80, 0.08);
+    border-radius: 4px;
+    margin-top: 12px;
+}
+
+.file-list strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4CAF50;
+    margin-bottom: 12px;
+}
+
+.file-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.file-list li {
+    font-size: 12px;
+    color: var(--warm-graphite);
+    padding: 6px 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+.file-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
 .upload-zone:hover {
     border-color: #CDB68D;
     background: var(--pure-white);

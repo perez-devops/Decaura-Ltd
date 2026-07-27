@@ -21,6 +21,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js"></script>
   </head>
   <body>
     <!-- ══════════════════════════════
@@ -142,12 +143,13 @@
             <!-- RIGHT COLUMN: FORM -->
             <div class="contact-form-wrap">
               <span class="info-label">PROJECT INTRODUCTION</span>
-              <form class="project-form">
+              <form class="project-form" id="project-form">
                 <div class="form-row">
                   <div class="form-group">
                     <input
                       type="text"
                       id="name"
+                      name="name"
                       placeholder="Your name"
                       required
                     />
@@ -156,6 +158,7 @@
                     <input
                       type="email"
                       id="email"
+                      name="email"
                       placeholder="Email address"
                       required
                     />
@@ -164,12 +167,13 @@
 
                 <div class="form-row">
                   <div class="form-group">
-                    <input type="tel" id="tel" placeholder="Telephone" />
+                    <input type="tel" id="tel" name="telephone" placeholder="Telephone" />
                   </div>
                   <div class="form-group">
                     <input
                       type="text"
                       id="location"
+                      name="location"
                       placeholder="Project location"
                     />
                   </div>
@@ -179,7 +183,7 @@
                   <p class="section-title">Project type</p>
                   <div class="radio-grid">
                     <label class="radio-item">
-                      <input type="radio" name="project_type" value="private" />
+                      <input type="radio" name="project_type" value="Private Residence" />
                       <span class="radio-box"></span>
                       Private Residence
                     </label>
@@ -187,7 +191,7 @@
                       <input
                         type="radio"
                         name="project_type"
-                        value="commercial"
+                        value="Commercial Environment"
                       />
                       <span class="radio-box"></span>
                       Commercial Environment
@@ -196,7 +200,7 @@
                       <input
                         type="radio"
                         name="project_type"
-                        value="hospitality"
+                        value="Hospitality"
                       />
                       <span class="radio-box"></span>
                       Hospitality
@@ -205,7 +209,7 @@
                       <input
                         type="radio"
                         name="project_type"
-                        value="advisory"
+                        value="Advisory"
                       />
                       <span class="radio-box"></span>
                       Advisory
@@ -214,7 +218,7 @@
                       <input
                         type="radio"
                         name="project_type"
-                        value="international"
+                        value="International Project"
                       />
                       <span class="radio-box"></span>
                       International Project
@@ -223,11 +227,11 @@
                 </div>
 
                 <div class="form-group select-group">
-                  <select id="investment" required>
+                  <select id="investment" name="investment_range" required>
                     <option value="" disabled selected>Investment range</option>
-                    <option value="range1">₦10M - ₦50M</option>
-                    <option value="range2">₦50M - ₦100M</option>
-                    <option value="range3">₦100M+</option>
+                    <option value="₦10M - ₦50M">₦10M - ₦50M</option>
+                    <option value="₦50M - ₦100M">₦50M - ₦100M</option>
+                    <option value="₦100M+">₦100M+</option>
                   </select>
                   <i class="fas fa-chevron-down"></i>
                 </div>
@@ -235,6 +239,7 @@
                 <div class="form-group">
                   <textarea
                     id="vision"
+                    name="vision"
                     placeholder="Tell us about your vision"
                     rows="3"
                   ></textarea>
@@ -243,6 +248,7 @@
                 <div class="form-group">
                   <textarea
                     id="space"
+                    name="space"
                     placeholder="What would you like the space to become?"
                     rows="3"
                   ></textarea>
@@ -251,7 +257,7 @@
                 <div class="file-upload-wrap">
                   <p class="file-label">Attach the files (optional)</p>
                   <div class="upload-zone">
-                    <input type="file" id="files" multiple />
+                    <input type="file" id="files" name="files" multiple />
                     <div class="upload-content">
                       <i class="fas fa-upload"></i>
                       <p><strong>Drag and drop files here or browse</strong></p>
@@ -491,6 +497,7 @@
     </footer>
 
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/contact-form.js"></script>
     <script>
       (function () {
         const serviceLabels = {
