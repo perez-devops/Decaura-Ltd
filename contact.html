@@ -21,7 +21,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js"></script>
   </head>
   <body>
     <!-- ══════════════════════════════
@@ -144,6 +143,9 @@
             <div class="contact-form-wrap">
               <span class="info-label">PROJECT INTRODUCTION</span>
               <form class="project-form" id="project-form">
+                <input type="hidden" name="access_key" value="d6ed4f0f-8b06-4ba8-9a4f-6e35b7257115" />
+                <input type="hidden" name="subject" value="New Project Introduction — Decaura Website" />
+                <input type="checkbox" name="botcheck" style="display: none" tabindex="-1" autocomplete="off" />
                 <div class="form-row">
                   <div class="form-group">
                     <input
@@ -495,6 +497,26 @@
         </div>
       </div>
     </footer>
+
+    <!-- ══════════════════════════════
+         CONTACT FORM SUBMISSION MODAL
+    ══════════════════════════════ -->
+    <div class="form-modal-overlay" id="form-modal">
+      <div class="form-modal" role="alertdialog" aria-live="polite">
+        <button type="button" class="form-modal-close" id="form-modal-close" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+        <i class="form-modal-icon fas fa-check" id="form-modal-icon"></i>
+        <h3 id="form-modal-title">Thank You</h3>
+        <p id="form-modal-message">
+          Your project introduction has been received. Our team will review
+          your submission and be in touch shortly.
+        </p>
+        <button type="button" class="btn btn-bronze" id="form-modal-ok">
+          CLOSE
+        </button>
+      </div>
+    </div>
 
     <script src="./scripts/main.js"></script>
     <script src="./scripts/contact-form.js"></script>

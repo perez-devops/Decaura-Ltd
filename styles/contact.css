@@ -567,3 +567,93 @@
     .direct-call-card h3 { font-size: 20px; }
     .faq-item h3 { font-size: 14px; }
 }
+
+/* ── FORM SUBMISSION MODAL ──────────────────────────────────── */
+.form-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(31, 31, 31, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.form-modal-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.form-modal {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    background: var(--porcelain-white);
+    border: 1px solid var(--arch-beige);
+    padding: 48px 40px 40px;
+    text-align: center;
+    transform: translateY(16px);
+    transition: transform 0.3s ease;
+}
+
+.form-modal-overlay.is-open .form-modal {
+    transform: translateY(0);
+}
+
+.form-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: var(--warm-graphite);
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.form-modal-close:hover {
+    color: var(--ink-black);
+}
+
+.form-modal-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--brushed-bronze);
+    color: var(--porcelain-white);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.form-modal h3 {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--ink-black);
+    margin-bottom: 12px;
+}
+
+.form-modal p {
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--warm-graphite);
+    margin-bottom: 28px;
+}
+
+.form-modal .btn {
+    width: 100%;
+}
