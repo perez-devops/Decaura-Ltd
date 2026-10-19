@@ -13,48 +13,87 @@ document.addEventListener('DOMContentLoaded', () => {
     const indicators = Array.from(document.querySelectorAll('.indicator'));
     let   currentVid = 0;
     let   cycleTimer = null;
+    let   preloadTimer = null;
 
     function setVideo(index) {
-        // Fade out current
-        videos[currentVid].classList.remove('active');
+        clearTimeout(cycleTimer);
+        clearTimeout(preloadTimer);
+
+        // Fade out current video and pause it after fade completes (1.3s) to save GPU/memory
+        const prevVid = videos[currentVid];
+        if (prevVid && prevVid !== videos[index]) {
+            prevVid.classList.remove('active');
+            setTimeout(() => {
+                if (!prevVid.classList.contains('active')) {
+                    prevVid.pause();
+                }
+            }, 1300);
+        }
 
         // Reset ALL indicator fills (force reflow to restart CSS animation)
         indicators.forEach(ind => {
             ind.classList.remove('active');
             const fill = ind.querySelector('.indicator-fill');
-            fill.style.animation = 'none';
-            void fill.offsetHeight; // trigger reflow
-            fill.style.animation   = '';
+            if (fill) {
+                fill.style.animation = 'none';
+                void fill.offsetHeight; // trigger reflow
+                fill.style.animation   = '';
+            }
         });
 
         currentVid = index;
 
-        // Activate new video
+        // Activate and play new video
         const v = videos[currentVid];
-        v.currentTime = 0;
-        v.play().catch(() => { /* autoplay blocked – fallback gradient stays */ });
-        v.classList.add('active');
+        if (v) {
+            v.classList.add('active');
+            const playPromise = v.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(() => { /* autoplay blocked – fallback gradient stays */ });
+            }
+        }
 
         // Activate matching indicator (starts the CSS fill animation)
-        indicators[currentVid].classList.add('active');
+        if (indicators[currentVid]) {
+            indicators[currentVid].classList.add('active');
+        }
 
-        // Schedule next
-        clearTimeout(cycleTimer);
+        // Preload next video 4s before it switches so frames are already buffered
         const nextIndex = (currentVid + 1) % videos.length;
-        
-        // Preload next video 3s before it switches
-        setTimeout(() => {
-            videos[nextIndex].preload = 'auto';
-        }, 4000);
+        preloadTimer = setTimeout(() => {
+            const nextVid = videos[nextIndex];
+            if (nextVid && nextVid.preload !== 'auto') {
+                nextVid.preload = 'auto';
+                nextVid.load();
+            }
+        }, 3500);
 
+        // Schedule next video transition
         cycleTimer = setTimeout(() => setVideo(nextIndex), 8000);
     }
 
     if (videos.length) {
+        // Start first video immediately
         videos[0].play().catch(() => {});
-        indicators[0].classList.add('active');
-        cycleTimer = setTimeout(() => setVideo(1), 8000);
-        indicators.forEach((ind, i) => ind.addEventListener('click', () => setVideo(i)));
+        if (indicators[0]) indicators[0].classList.add('active');
+
+        // Preload video 2 after 3.5s
+        if (videos.length > 1) {
+            preloadTimer = setTimeout(() => {
+                if (videos[1]) {
+                    videos[1].preload = 'auto';
+                    videos[1].load();
+                }
+            }, 3500);
+            cycleTimer = setTimeout(() => setVideo(1), 8000);
+        }
+
+        indicators.forEach((ind, i) => ind.addEventListener('click', () => {
+            if (videos[i]) {
+                videos[i].preload = 'auto';
+            }
+            setVideo(i);
+        }));
     }
 
 
