@@ -138,43 +138,54 @@
    MEET OUR FOUNDER
    ════════════════════════════════════════════════════════════ */
 .founder-section {
-    padding: 40px 0;
+    padding: 80px 0;
 }
 .founder-layout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 72px;
+    align-items: stretch;
+}
+.founder-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
 }
 .founder-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 680px;
+    height: 100%;
     object-fit: cover;
     object-position: center top;
+    display: block;
 }
 .founder-name {
     font-family: var(--serif);
-    font-size: clamp(32px, 4vw, 52px);
+    font-size: clamp(32px, 4vw, 48px);
     font-weight: 400;
     color: var(--ink-black);
-    margin-bottom: 28px;
-    line-height: 1.1;
+    margin-bottom: 24px;
+    line-height: 1.15;
 }
-.founder-content{
+.founder-content {
     display: flex;
-    align-items: center;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
 }
 .founder-content p {
-    text-align:center;
+    text-align: left;
     font-family: var(--sans);
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 300;
     color: var(--warm-graphite);
-    line-height: 1.9;
+    line-height: 1.85;
     margin-bottom: 18px;
+}
+.founder-content p:last-child {
+    margin-bottom: 0;
 }
 .founder-closing {
     padding-top: 8px;
@@ -401,8 +412,9 @@
 @media (max-width: 1024px) {
     .who-layout,
     .founder-layout     { grid-template-columns: 1fr; gap: 48px; }
-    .who-image img      { height: 100%; }
-    .founder-image img  { height: 100%; object-position: center top; }
+    .who-image img      { height: 480px; }
+    .founder-image      { position: static; height: auto; }
+    .founder-image img  { position: static; height: 520px; object-position: center top; }
     .foundation-pillars { grid-template-columns: repeat(2, 1fr); }
     .foundation-body    { grid-template-columns: 1fr; gap: 16px; }
     .who-section,
@@ -414,8 +426,8 @@
     .about-hero         { height: 60vh; }
     .foundation-pillars { grid-template-columns: 1fr; }
     .foundation-closing { grid-column: 1; }
-    .who-image img      { height: 100%; }
-    .founder-image img  { height: 100%; }
+    .who-image img      { height: 420px; }
+    .founder-image img  { height: 440px; }
     .who-section,
     .founder-section    { padding: 56px 0; }
     .pillar-number      { font-size: clamp(20px, 5vw, 28px); }
@@ -424,8 +436,8 @@
 }
 
 @media (max-width: 480px) {
-    .who-image img      { height: 100%; }
-    .founder-image img  { height: 100%; }
+    .who-image img      { height: 360px; }
+    .founder-image img  { height: 380px; }
     .who-section,
     .founder-section    { padding: 48px 0; }
     .philosophy-section,

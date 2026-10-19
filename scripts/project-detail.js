@@ -8,8 +8,8 @@ const PROJECTS = {
     'warm-memories-interior': {
         title:        'Warm Memories Interior',
         category:     'RESIDENTIAL',
-        location:     'Lagos',
-        locationYear: 'LAGOS — 2025',
+        location:     'Surrey, United Kingdom',
+        locationYear: 'Surrey, United Kingdom — 2025',
         size:         '260 SQM',
         completion:   '8 Months',
         status:       'Completed',
@@ -47,14 +47,14 @@ const PROJECTS = {
             { label: 'Joinery',  value: 'Custom Warm Oak' }
         ],
         nextProject: 'tuscan-luxe-lekki-phase-1',
-        nextTitle:   'Tuscan Luxe, Lekki'
+        nextTitle:   'Tuscan Luxe'
     },
 
     'tuscan-luxe-lekki-phase-1': {
-        title:        'Tuscan Luxe — Lekki Phase 1',
+        title:        'Tuscan Luxe',
         category:     'RESIDENTIAL',
-        location:     'Lekki, Lagos',
-        locationYear: 'LEKKI — 2026',
+        location:     'Cheshire, United Kingdom',
+        locationYear: 'Cheshire, United Kingdom — 2025',
         size:         '340 SQM',
         completion:   '10 Months',
         status:       'Completed',
@@ -93,11 +93,11 @@ const PROJECTS = {
             { label: 'Accents',  value: 'Antique Brass' }
         ],
         nextProject: 'emirati-luxury-ajah-lagos',
-        nextTitle:   'Emirati Luxury, Ajah'
+        nextTitle:   'Emirati Luxury'
     },
 
     'emirati-luxury-ajah-lagos': {
-        title:        'Emirati Luxury — Ajah, Lagos',
+        title:        'Emirati Luxury',
         category:     'RESIDENTIAL',
         location:     'Ajah, Lagos',
         locationYear: 'AJAH — 2026',
@@ -152,8 +152,8 @@ const PROJECTS = {
     'citizen-of-the-world-design': {
         title:        'Citizen of the World',
         category:     'RESIDENTIAL',
-        location:     'Lagos',
-        locationYear: 'LAGOS — 2025',
+        location:     'Estepona, Spain',
+        locationYear: 'Estepona, Spain — 2025',
         size:         '300 SQM',
         completion:   '9 Months',
         status:       'Completed',
@@ -194,8 +194,8 @@ const PROJECTS = {
     'lake-side-view-design': {
         title:        'Lake Side View',
         category:     'RESIDENTIAL',
-        location:     'Lagos',
-        locationYear: 'LAGOS — 2025',
+        location:     'Allgäu, Germany',
+        locationYear: 'Allgäu, Germany — 2025',
         size:         '420 SQM',
         completion:   '12 Months',
         status:       'Completed',
@@ -232,11 +232,11 @@ const PROJECTS = {
             { label: 'Finishes', value: 'Weather-Resistant Coatings' }
         ],
         nextProject: 'regency-living-ota-ogun-state',
-        nextTitle:   'Regency Living, Ota'
+        nextTitle:   'Regency Living'
     },
 
     'regency-living-ota-ogun-state': {
-        title:        'Regency Living — Ota',
+        title:        'Regency Living',
         category:     'RESIDENTIAL',
         location:     'Ota, Ogun State',
         locationYear: 'OTA — 2025',
@@ -281,14 +281,14 @@ const PROJECTS = {
             { label: 'Accents', value: 'Brass & Bronze' }
         ],
         nextProject: 'french-elegance-victoria-island',
-        nextTitle:   'French Elegance, V.I.'
+        nextTitle:   'French Elegance, London'
     },
 
     'french-elegance-victoria-island': {
-        title:        'French Elegance — Victoria Island',
+        title:        'French Elegance',
         category:     'RESIDENTIAL',
-        location:     'Victoria Island, Lagos',
-        locationYear: 'VICTORIA ISLAND — 2024',
+        location:     'London, United Kingdom',
+        locationYear: 'London, United Kingdom — 2024',
         size:         '280 SQM',
         completion:   '9 Months',
         status:       'Completed',
