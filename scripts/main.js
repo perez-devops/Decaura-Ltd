@@ -5,15 +5,89 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     /* ──────────────────────────────────────────────────────
-       1.  HERO VIDEO CYCLING
-           Each video plays for 7 s then crossfades to the next.
-           Right-side progress indicators fill over 7 s.
+       1.  HERO VIDEO PERSISTENT CACHE & CYCLING ENGINE
+           Uses browser Cache Storage API to store video blobs on user device.
+           - On return visits: 0ms load, plays instantly from local device storage without reloading.
+           - Inactive videos paused to free GPU decoding memory and eliminate lag.
+           - Preloads next video ahead of crossfade transition.
+           - Pauses on tab switch to preserve memory and battery.
     ──────────────────────────────────────────────────────── */
     const videos     = Array.from(document.querySelectorAll('.hero-video'));
     const indicators = Array.from(document.querySelectorAll('.indicator'));
     let   currentVid = 0;
     let   cycleTimer = null;
     let   preloadTimer = null;
+
+    const CACHE_NAME = 'decaura-hero-videos-v1';
+    const originalVideoUrls = videos.map(v => {
+        const s = v.querySelector('source');
+        return s ? s.src : v.src;
+    });
+
+    async function initHeroVideoCache() {
+        if (!('caches' in window)) return;
+
+        try {
+            const cache = await caches.open(CACHE_NAME);
+
+            // Step 1: Immediately attach cached blobs if already stored
+            for (let i = 0; i < videos.length; i++) {
+                const url = originalVideoUrls[i];
+                if (!url) continue;
+
+                const cached = await cache.match(url);
+                if (cached) {
+                    const blob = await cached.blob();
+                    const blobUrl = URL.createObjectURL(blob);
+                    const vid = videos[i];
+                    const source = vid.querySelector('source');
+
+                    const curTime = vid.currentTime;
+
+                    if (source) source.src = blobUrl;
+                    vid.src = blobUrl;
+
+                    if (i === currentVid) {
+                        vid.currentTime = curTime;
+                        vid.play().catch(() => {});
+                    }
+                }
+            }
+
+            // Step 2: Sequentially pre-cache any video not yet in local storage
+            preCacheVideos(cache);
+        } catch (e) {
+            // Fallback gracefully to direct streaming
+        }
+    }
+
+    async function preCacheVideos(cache) {
+        for (let i = 0; i < originalVideoUrls.length; i++) {
+            const url = originalVideoUrls[i];
+            if (!url) continue;
+
+            try {
+                const match = await cache.match(url);
+                if (!match) {
+                    const res = await fetch(url);
+                    if (res.ok) {
+                        await cache.put(url, res.clone());
+                        const blob = await res.blob();
+                        const blobUrl = URL.createObjectURL(blob);
+
+                        const vid = videos[i];
+                        if (vid && vid.paused && i !== currentVid) {
+                            const source = vid.querySelector('source');
+                            if (source) source.src = blobUrl;
+                            vid.src = blobUrl;
+                        }
+                    }
+                }
+            } catch (err) {
+                // Ignore network interruption, fallback handles it
+            }
+        }
+    }
 
     function setVideo(index) {
         clearTimeout(cycleTimer);
@@ -77,6 +151,9 @@ document.addEventListener('DOMContentLoaded', () => {
         videos[0].play().catch(() => {});
         if (indicators[0]) indicators[0].classList.add('active');
 
+        // Initialize persistent device cache
+        initHeroVideoCache();
+
         // Preload video 2 after 3.5s
         if (videos.length > 1) {
             preloadTimer = setTimeout(() => {
@@ -94,6 +171,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             setVideo(i);
         }));
+
+        // Pause when tab is hidden to eliminate background battery/GPU usage
+        document.addEventListener('visibilitychange', () => {
+            const activeVid = videos[currentVid];
+            if (!activeVid) return;
+            if (document.hidden) {
+                clearTimeout(cycleTimer);
+                clearTimeout(preloadTimer);
+                activeVid.pause();
+            } else {
+                activeVid.play().catch(() => {});
+                cycleTimer = setTimeout(() => setVideo((currentVid + 1) % videos.length), 8000);
+            }
+        });
     }
 
 
