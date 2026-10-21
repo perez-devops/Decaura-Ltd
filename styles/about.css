@@ -166,11 +166,12 @@
 }
 .founder-name {
     font-family: var(--serif);
-    font-size: clamp(32px, 4vw, 48px);
+    font-size: clamp(28px, 4vw, 48px);
     font-weight: 400;
     color: var(--ink-black);
     margin-bottom: 24px;
     line-height: 1.15;
+    text-align: left;
 }
 .founder-content {
     display: flex;
@@ -412,15 +413,19 @@
    RESPONSIVE
    ════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
-    .who-layout,
-    .founder-layout     { grid-template-columns: 1fr; gap: 48px; }
+    .who-layout         { grid-template-columns: 1fr; gap: 48px; }
+    .founder-layout     { grid-template-columns: 1fr; gap: 40px; }
     .who-image img      { height: 480px; }
-    .founder-image      { position: relative; width: 100%; max-width: 440px; height: auto; aspect-ratio: 3 / 4; margin: 0 auto; overflow: hidden; }
-    .founder-image img  { position: static; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    /* Image stacks above text – switch to normal block flow */
+    .founder-image      { position: relative; width: 100%; max-width: 480px; height: 560px; margin: 0 auto; overflow: hidden; }
+    .founder-image img  { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .founder-content    { text-align: left; }
+    .founder-name       { font-size: clamp(28px, 6vw, 40px); text-align: left; }
+    .founder-content p  { text-align: left; }
     .foundation-pillars { grid-template-columns: repeat(2, 1fr); }
     .foundation-body    { grid-template-columns: 1fr; gap: 16px; }
     .who-section,
-    .founder-section    { padding: 72px 0; }
+    .founder-section    { padding: 64px 0; }
 }
 
 @media (max-width: 768px) {
@@ -429,7 +434,9 @@
     .foundation-pillars { grid-template-columns: 1fr; }
     .foundation-closing { grid-column: 1; }
     .who-image img      { height: 420px; }
-    .founder-image      { max-width: 380px; aspect-ratio: 3 / 4; margin: 0 auto; }
+    .founder-layout     { gap: 32px; }
+    .founder-image      { max-width: 100%; height: 480px; }
+    .founder-name       { font-size: clamp(26px, 6vw, 36px); }
     .who-section,
     .founder-section    { padding: 56px 0; }
     .pillar-number      { font-size: clamp(20px, 5vw, 28px); }
@@ -439,7 +446,9 @@
 
 @media (max-width: 480px) {
     .who-image img      { height: 360px; }
-    .founder-image      { max-width: 100%; aspect-ratio: 3 / 4; margin: 0 auto; }
+    .founder-image      { height: 420px; }
+    .founder-name       { font-size: clamp(24px, 7vw, 32px); }
+    .founder-content p  { font-size: 14px; }
     .who-section,
     .founder-section    { padding: 48px 0; }
     .philosophy-section,

@@ -172,6 +172,43 @@ document.addEventListener('DOMContentLoaded', () => {
             setVideo(i);
         }));
 
+        // Resilient Stall & Error Guard for poor network conditions
+        videos.forEach((vid, i) => {
+            let stallTimer = null;
+
+            vid.addEventListener('waiting', () => {
+                if (i === currentVid) {
+                    stallTimer = setTimeout(() => {
+                        const sources = Array.from(vid.querySelectorAll('source'));
+                        if (sources.length > 1) {
+                            const fallback = sources[1].src;
+                            if (vid.currentSrc !== fallback) {
+                                vid.src = fallback;
+                                vid.load();
+                                vid.play().catch(() => {});
+                            }
+                        }
+                    }, 2500);
+                }
+            });
+
+            vid.addEventListener('playing', () => clearTimeout(stallTimer));
+            vid.addEventListener('canplay', () => clearTimeout(stallTimer));
+
+            vid.addEventListener('error', () => {
+                clearTimeout(stallTimer);
+                const sources = Array.from(vid.querySelectorAll('source'));
+                if (sources.length > 1) {
+                    const fallback = sources[1].src;
+                    if (vid.currentSrc !== fallback) {
+                        vid.src = fallback;
+                        vid.load();
+                        if (i === currentVid) vid.play().catch(() => {});
+                    }
+                }
+            });
+        });
+
         // Pause when tab is hidden to eliminate background battery/GPU usage
         document.addEventListener('visibilitychange', () => {
             const activeVid = videos[currentVid];
