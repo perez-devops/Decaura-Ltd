@@ -4,3 +4,4 @@ node_modules
 *.txt
 .claude
 .claude/knowledge.env
+videos/
